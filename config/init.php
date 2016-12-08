@@ -11,11 +11,7 @@
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
-<<<<<<< HEAD
-  //sdjfhsdkf
-=======
 
->>>>>>> fb9bbb62ce938cc862098a94fc0bdc72b4cf1945
   $smarty = new Smarty;
   $smarty->template_dir = $BASE_DIR . 'templates/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';
