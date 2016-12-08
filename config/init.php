@@ -3,13 +3,13 @@
   session_start();
 
   $BASE_DIR = dirname(__DIR__).'/';
-  $BASE_URL = 'http://gnomo.fe.up.pt/~ee12113/trabalhosSiem/trabalhoPHP-2/';
+  $BASE_URL = 'http://gnomo.fe.up.pt/~ee12046/trabalhosSiem/trabalhoPHP-2/';
 
   $conn = new PDO('pgsql:host=db.fe.up.pt;dbname=siem1639', 'siem1639', 'LmeGrjVv');
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $conn->query('set search_path TO pecasrg');
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  //ashidhasidh
+
   include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
 
   $smarty = new Smarty;

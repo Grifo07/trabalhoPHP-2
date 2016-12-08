@@ -3,7 +3,7 @@
   <head>
     <title>Fritter</title>
     <meta charset='utf-8'>
-    <link rel="stylesheet" href="{$BASE_URL}/css/style.css">
+    <link rel="stylesheet" href="{$BASE_URL}css/style.css">
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="{$BASE_URL}javascript/main.js"></script>
   </head>
