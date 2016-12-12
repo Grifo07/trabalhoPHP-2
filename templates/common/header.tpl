@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fritter</title>
+    <title>RG Peças</title>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="{$BASE_URL}css/style.css">
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <h1><a href="{$BASE_URL}">Fritter</a></h1>
+      <h1><a href="{$BASE_URL}"><img src="{$BASE_URL}images/assets/headerLogo.png"></a></h1>
       {if $USERNAME}
         {include file='common/menu_logged_in.tpl'}
       {else}

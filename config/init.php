@@ -1,5 +1,5 @@
 <?php
-  session_set_cookie_params(3600, '...');
+  session_set_cookie_params(3600, '/~ee12046/');
   session_start();
 
   $BASE_DIR = dirname(__DIR__).'/';
@@ -16,7 +16,7 @@
   $smarty->template_dir = $BASE_DIR . 'templates/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';
   $smarty->assign('BASE_URL', $BASE_URL);
-
+  
   $smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);
   $smarty->assign('FIELD_ERRORS', $_SESSION['field_errors']);
   $smarty->assign('SUCCESS_MESSAGES', $_SESSION['success_messages']);

@@ -1,18 +1,27 @@
 html {
-  background-color: #B8ECEF;  
+  background-color: #B8ECEF;
+  font-family: arial;
 }
 
 body {
-  width: 40em;
+  /*width: 70em;*/
   margin: auto;
   background-color: white;
+
+  
 }
 
 /* HEADER */
 
 header {
-  background-color: #333;
-  padding: 10px;
+  background-color: #825124;
+  padding: 10px 10%;
+}
+
+header img {
+  margin: 5px 0;
+  height: 75px;
+  width: 75px;
 }
 
 header a {
@@ -22,12 +31,19 @@ header a {
 
 header h1 {
   margin: 0;
+  /*display:inline;*/ 
+  float: left;
 }
 
 header form {
-  display:inline; 
+  /*display:inline;*/ 
   float: right;
 }
+
+header form input{
+  display:block; 
+}
+
 
 header input[type=text], 
 header input[type=password] {

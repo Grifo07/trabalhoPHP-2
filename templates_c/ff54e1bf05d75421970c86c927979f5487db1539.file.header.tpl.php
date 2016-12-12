@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-12-08 12:29:39
+<?php /* Smarty version Smarty-3.1.15, created on 2016-12-12 12:58:59
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:156550731958494bfdf04343-41678115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff54e1bf05d75421970c86c927979f5487db1539' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1481200177,
+      1 => 1481547537,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_58494bfe024601_53354771')) {function content_58494bfe024601_53354771($_smarty_tpl) {?><!DOCTYPE html>
 <html>
   <head>
-    <title>Fritter</title>
+    <title>RG Peças</title>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 css/style.css">
@@ -42,7 +42,8 @@ javascript/main.js"></script>
   <body>
     <header>
       <h1><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-">Fritter</a></h1>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/headerLogo.png"></a></h1>
       <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
         <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
