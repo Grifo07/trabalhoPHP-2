@@ -1,24 +1,26 @@
 <?php
   include_once('../../config/init.php');
-  include_once($BASE_DIR .'database/tweets.php');
+
+
 
 
   //Meter aqui uma data de javascript com imagens e publicidade
 
-  // $tweets = getAllTweets();  
+   $products = getAllProducts();  
 
-  // foreach ($tweets as $key => $tweet) {
-  //   unset($photo);
-  //   if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.png'))
-  //     $photo = 'images/users/'.$tweet['username'].'.png';
-  //   if (file_exists($BASE_DIR.'images/users/'.$tweet['username'].'.jpg'))
-  //     $photo = 'images/users/'.$tweet['username'].'.jpg';
-  //   if (!$photo) $photo = 'images/assets/default.png';
-  //   $tweets[$key]['photo'] = $photo;
-  // }
+    foreach ($products as $key => $product) {
 
-  // $smarty->assign('last_tweet_id', $tweets[0]['id']);
+      unset($photo);
+      if (file_exists($BASE_DIR.'images/products/'.$product['nome'].'.png'))
+       $photo = 'images/products/'.$product['nome'].'.png';
+      if (file_exists($BASE_DIR.'images/products/'.$product['nome'].'.jpg'))
+        $photo = 'images/products/'.$product['nome'].'.jpg';
+      if (!$photo) $photo = 'images/assets/default.png';
+      $products[$key]['photo'] = $photo;
+     }
 
-  // $smarty->assign('tweets', $tweets);
-  $smarty->display('tweets/list.tpl');
+ 
+
+   $smarty->assign('products', $products);
+  $smarty->display('products/list.tpl');
 ?>

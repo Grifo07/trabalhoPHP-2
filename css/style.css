@@ -1,168 +1,283 @@
-html {
-  background-color: #B8ECEF;
-  font-family: arial;
+html{
+    height: 100%;
 }
+
 
 body {
-  /*width: 70em;*/
-  margin: auto;
-  background-color: white;
-
-  
+    background: white;
+    display: inline;
+    font-family: arial;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    min-height: 100%;
 }
-
-/* HEADER */
-
-header {
-  background-color: #825124;
-  padding: 10px 10%;
-}
-
-header img {
-  margin: 5px 0;
-  height: 75px;
-  width: 75px;
-}
-
-header a {
-  text-decoration: none;
-  color: white;  
-}
-
-header h1 {
-  margin: 0;
-  /*display:inline;*/ 
-  float: left;
-}
-
-header form {
-  /*display:inline;*/ 
-  float: right;
-}
-
-header form input{
-  display:block; 
+.sidepub{
+    width: 10%;
 }
 
 
-header input[type=text], 
-header input[type=password] {
-  width: 100px;
+a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
-header .username {
-  color: cyan;
+a:hover, a:active {
+    text-decoration: underline;
 }
 
-/* TWEET FORM */
+footer {
+    overflow: visible;
+    background-color: #D47404;
+    width: 100%;
+    clear: both;
+    z-index: 10;
+    height: 3em;
+    margin-top: 50px;
+    position:relative;
+    bottom:0;
+    left:0;
+    color: white;
 
-#tweet_form {
-  background-color: #666;
-  padding: 5px;
 }
 
-#tweet_form textarea{
-  width: 40em;
-  margin: 5px;
-  border: none;
+footer a:link, footer a:visited {
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    margin: 6% 0;
 }
 
-#tweet_form input {
-  display: block;
-  background-color: #fff;
-  border: none;
-  margin: 5px;
+footer a:hover, footer a:active {
+    background-color: #B2B0AF;
 }
 
-/* CONTENT */
+h2{
+    background-color: #D47404;
+    border: 1px solid #959595;
+    color: white;
 
-section {
-  padding: 10px 20px;
+
 }
 
-section h2 {
-  margin: 5px 0;
+.slidercontainer{
+
+
+    margin-top: -5px;
+    padding: 0 0;
 }
 
-/* TWEET  */
+.coluna {
+	margin-left: 0%;
+    border-radius: 0px;
+    float: left;
+    padding: 0;
 
-.tweet-data {
-  position: relative;
-  padding: 10px 0;
-  border-bottom: 1px solid #999;
-  min-height: 64px;
 }
 
-.tweet-data .realname {
-  font-weight: bold;
+.linha {
+	border-radius: 0px;
+	padding: 0 0%;
+	display: block;
 }
 
-.tweet-data .username {
-  color: #666;
+.caixastexto{
+
+    border-radius: 0px;
+    padding: 1% 0% 0 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
-.tweet-data .time {
-  position: absolute;
-  right: 0;
+#botao_registar{
+    margin-right: 10%;
+    float: right;
 }
 
-.tweet-data .tweet-text {
-  margin-top: 5px;
-}
+#botao_login{
 
-.tweet-data img{
-  width: 64px;
-  height: 64px;
-  float: left;
-  margin-right: 10px;
-}
-
-#new_tweets {
-  display: none;
-  background-color: #B8ECEF;
-  text-align: center;
-  padding: 10px;
-  color: #333;
-}
-
-#new_tweets a{
-  color: blue;
-  text-decoration: none;
-}
-
-
-/* FORM */
-
-label {
-  display: block;  
-}
-
-/* MESSAGES */
-
-.error {
-  background-color: #FFAAAA;
-  padding: 10px;
-  color: #333;
-  font-weight: bold;
-}
-
-.success {
-  background-color: #AAFFAA;
-  padding: 10px;
-  color: #333;
-  font-weight: bold;
-}
-
-.close {
-  float: right;
-  text-decoration: none;
-  color: #666;
-}
-
-.field_error {
-  color: red;
-  font-size: 70%;
+    margin-left: 10%;
+    display: inline-block;
 }
 
 
 
+
+
+ul{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+ul.parent > li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border: 1px solid #959595;
+    cursor: pointer;
+    background-color: #B3ACA6;
+    border-radius: 5px;
+    font-size:20px;
+}
+
+
+ul.child{
+    display: none;
+    width: 100%!important;
+    padding-top: 10px;
+    font-size:15px;
+}
+
+ul.child > li {
+    
+    border-top: 1px solid #959595;
+    margin-top: 3px;
+    
+    
+}
+
+li{
+    list-style: none;  
+}
+
+#username{
+   margin-top: 55px;
+    width: 10%;
+}
+
+#carrinho{
+   
+   margin-top: 55px;
+    width: 10%;
+}
+
+
+
+#caixapesquisa{
+    margin-left: 50%;
+    height: 20px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#livesearch{
+    margin-left: 50%;
+    width: 100%;
+    color: black;
+   
+}
+
+
+
+#headerLogo{
+    margin: 12.5px 0px;
+    height: 75px;
+    width: 75px;
+    margin-left: 50px;
+
+}
+
+#container_botoes{
+
+width: 55%;
+color: red;
+padding-top: 55px;
+padding-left: 10%;
+
+
+}
+
+#container_caixas{
+
+padding: 0 0 0 0%;
+
+
+}
+
+header{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    background-color: #D47404;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: inline-block;
+    
+    overflow: visible;
+}
+
+#botao_login {
+    background-color: #B3ACA6;
+    color: white;
+    padding: 4px 8px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+#botao_registar {
+    background-color: #B3ACA6;
+    color: white;
+    padding: 4px 8px;
+    text-align: center; 
+    text-decoration: none;
+    
+}
+
+#botao_login:hover, #botao_login:active {
+    background-color: #444549;
+}
+
+#botao_registar:hover, #botao_registar:active {
+    background-color: #444549;
+}
+
+#linktabela{
+
+color: black;
+
+}
+
+#pub{
+
+color: black;
+float: middle;
+
+}
+table {
+    border: 1px solid #dddddd;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+table h4 {
+    margin: 10px 0 0 0;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px 8px 8px 1%;
+    background-color: #D47404;
+
+}
+td {
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px 8px 8px 2%;
+}
+
+.x_remove_table{
+
+    height: 25px;
+    width: 25px;
+
+}

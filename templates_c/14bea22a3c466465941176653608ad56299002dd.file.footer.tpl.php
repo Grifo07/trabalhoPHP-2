@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-12-05 12:48:06
+<?php /* Smarty version Smarty-3.1.15, created on 2016-12-17 17:36:15
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11620077115845620611d617-12967658%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14bea22a3c466465941176653608ad56299002dd' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/footer.tpl',
-      1 => 1386924324,
+      1 => 1481996170,
       2 => 'file',
     ),
   ),
@@ -15,10 +15,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.15',
   'unifunc' => 'content_58456206121fc2_42739668',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58456206121fc2_42739668')) {function content_58456206121fc2_42739668($_smarty_tpl) {?>  </body>
+<?php if ($_valid && !is_callable('content_58456206121fc2_42739668')) {function content_58456206121fc2_42739668($_smarty_tpl) {?> </body>
+
+  		<footer>
+  		
+			<div class="linha" style="float:right;">
+				<a href="">Contactos</a>
+				<a href="">Sobre nós</a>
+			</div>
+		</footer>
 </html>
 <?php }} ?>

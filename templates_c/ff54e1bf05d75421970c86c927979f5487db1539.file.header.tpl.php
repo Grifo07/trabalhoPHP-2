@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-12-12 12:58:59
+<?php /* Smarty version Smarty-3.1.15, created on 2016-12-20 00:37:30
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:156550731958494bfdf04343-41678115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff54e1bf05d75421970c86c927979f5487db1539' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1481547537,
+      1 => 1482101685,
       2 => 'file',
     ),
   ),
@@ -21,10 +21,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'BASE_URL' => 0,
     'USERNAME' => 0,
-    'ERROR_MESSAGES' => 0,
-    'error' => 0,
-    'SUCCESS_MESSAGES' => 0,
-    'success' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -33,52 +29,74 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <head>
     <title>RG Peças</title>
     <meta charset='utf-8'>
+
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 css/style.css">
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-javascript/main.js"></script>
+javascript/menus/showmenu.js" type="text/javascript"></script>
+
+  
+
   </head>
-  <body>
+  
     <header>
-      <h1><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-images/assets/headerLogo.png"></a></h1>
-      <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+    <div class="linha">
+      <div class="coluna">
+      <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+"><img id="headerLogo" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+images/assets/headerLogo.png"></a>
+       </div>
+       <div class="coluna" id="container_botoes">
+       
+
+
+         <nav id="navigation">
+            <ul class="parent">
+              <li id="categorias">Categorias
+                <ul class="child">
+                  <li><a href="http://www.google.pt">Periféricos</a></li>
+                  <li><a href="http://www.google.pt">Monitores</a></li>
+                  <li><a href="http://www.google.pt">Torres</a></li>
+                  <li><a href="http://www.google.pt">Componentes</a></li>
+                </ul>
+                </li>
+              <li id="destaques">Destaques
+                <ul class="child">
+                  <li><a href="http://www.google.pt">Periféricos</a></li>
+                  <li><a href="http://www.google.pt">Monitores</a></li>
+                  <li><a href="http://www.google.pt">Torres</a></li>
+                  <li><a href="http://www.google.pt">Componentes</a></li>
+                </ul>
+                </li>
+            </ul>
+         </nav>
+        
+
+        <div class="coluna">
+        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/search/livesearch.js" type="text/javascript"></script>
+
+        <form>
+          <input type="text" id="caixapesquisa" size="30" onkeyup="showResult(this.value)" />
+          <div id="livesearch"></div>
+        </form>
+        </div>
+
+
+        </div>
+       </div>
+       </div>
+       
+        <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
         <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
       <?php } else { ?>
         <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
       <?php }?>
+    
     </header>
-    <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
-    <div id="tweet_form">
-      <form action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-actions/tweets/tweet.php" method="post">
-        <textarea name="tweet" placeholder="Say something"></textarea>
-        <input type="submit">
-      </form>
-    </div>
-    <?php }?>
-    <div id="error_messages">
-    <?php  $_smarty_tpl->tpl_vars['error'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['error']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['ERROR_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['error']->key => $_smarty_tpl->tpl_vars['error']->value) {
-$_smarty_tpl->tpl_vars['error']->_loop = true;
-?>
-      <div class="error"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
-<a class="close" href="#">X</a></div>
-    <?php } ?>
-    </div>
-    <div id="success_messages">
-    <?php  $_smarty_tpl->tpl_vars['success'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['success']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['SUCCESS_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['success']->key => $_smarty_tpl->tpl_vars['success']->value) {
-$_smarty_tpl->tpl_vars['success']->_loop = true;
-?>
-      <div class="success"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
-<a class="close" href="#">X</a></div>
-    <?php } ?>
-    </div>
+   <body>
+ 
 <?php }} ?>

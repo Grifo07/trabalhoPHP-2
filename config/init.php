@@ -1,16 +1,20 @@
 <?php
-  session_set_cookie_params(3600, '/~ee12046/');
+  session_set_cookie_params(3600, '/~ee12113/');
   session_start();
 
   $BASE_DIR = dirname(__DIR__).'/';
-  $BASE_URL = 'http://gnomo.fe.up.pt/~ee12046/trabalhosSiem/trabalhoPHP-2/';
+  $BASE_URL = '//gnomo.fe.up.pt/~ee12113/trabalhosSiem/trabalhoPHP-2/';
 
-  $conn = new PDO('pgsql:host=db.fe.up.pt;dbname=siem1639', 'siem1639', 'LmeGrjVv');
-  $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-  $conn->query('set search_path TO pecasrg');
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO('pgsql:host=db.fe.up.pt; dbname=siem1639', 'siem1639', 'LmeGrjVv');
+    $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $conn->query('set search_path TO pecasrg');
+   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
+   include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
+  
+   include ($BASE_DIR . 'actions/products/product_list_creator.php'); //MUDAR QUANDO SE FIZER ADMIN
+
+
 
   $smarty = new Smarty;
   $smarty->template_dir = $BASE_DIR . 'templates/';
