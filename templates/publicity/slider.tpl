@@ -1,4 +1,5 @@
-<div class="slidercontainer">
+{include file='publicity/sidepub.tpl'}
+<div class="slidercontainer" >
  <a href="http://www.google.pt">  
  <img class="mySlides" src="{$BASE_URL}images/publicity/slider/honor8.jpg" style="width:100%; height: 100%;">
  </a>
@@ -9,5 +10,7 @@
   <img class="mySlides" src="{$BASE_URL}images/publicity/slider/titanx.jpg" style="width:100%; height: 100%;">
    </a>
 </div>
+{include file='publicity/sidepubright.tpl'}
+
 
 <script src="{$BASE_URL}javascript/publicity/publicity.js" type="text/javascript"></script>

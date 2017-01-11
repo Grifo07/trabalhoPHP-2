@@ -3,7 +3,7 @@
   function createUser($realname, $username, $password) {
     global $conn;
     $stmt = $conn->prepare("INSERT INTO users VALUES (?, ?, ?)");
-    $stmt->execute(array($realname, $username, sha1($password)));
+    $stmt->execute(array($username, $realname, sha1($password)));
   }
 
   function isLoginCorrect($username, $password) {

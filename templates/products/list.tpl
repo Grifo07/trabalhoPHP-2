@@ -8,7 +8,7 @@
 
 <div class="linha">
 
-{include file='publicity/sidepub.tpl'}
+
 
 	<div class="coluna" style="width: 70%;">
 			<h2 style="text-align: center;">PRODUTOS</h2>
@@ -44,7 +44,7 @@
 
 		</div>
 
-{include file='publicity/sidepub.tpl'}
+
 
 
 </div>

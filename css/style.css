@@ -64,7 +64,8 @@ h2{
 
 .slidercontainer{
 
-
+    display: inline-block;
+    width: 70%;
     margin-top: -5px;
     padding: 0 0;
 }
@@ -215,6 +216,7 @@ header{
 }
 
 #botao_login {
+
     background-color: #B3ACA6;
     color: white;
     padding: 4px 8px;
@@ -252,24 +254,25 @@ color: black;
 float: middle;
 
 }
-table {
+.tabelapesquisa {
     border: 1px solid #dddddd;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
-table h4 {
+.tabelapesquisa h4 {
     margin: 10px 0 0 0;
 }
 
-th {
+.tabelapesquisa th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px 8px 8px 1%;
     background-color: #D47404;
 
 }
-td {
+
+.tabelapesquisa td {
     border-bottom: 1px solid #dddddd;
     text-align: center;
     padding: 8px 8px 8px 2%;
@@ -280,4 +283,41 @@ td {
     height: 25px;
     width: 25px;
 
+}
+
+#temcaixa {
+    padding: 0px 8px 8px 2%;
+}
+
+#caixareg{
+    height: 20px;
+    width: 90%;
+}
+
+#caixaregmaior {
+    height: 20px;
+    width: 95%;
+}
+
+.tabelaregisto {
+    border: 1px solid #dddddd;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.tabelaregisto h4 {
+    margin: 10px 0 0 0;
+}
+
+.tabelaregisto th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px 8px 8px 1%;
+    background-color: #D47404;
+
+}
+.tabelaregisto td {
+    /*border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px 8px 8px 2%;
 }

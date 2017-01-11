@@ -1,11 +1,6 @@
 <?php
   include_once('../../config/init.php');
 
-
-
-
-  //Meter aqui uma data de javascript com imagens e publicidade
-
    $products = getAllProducts();  
 
     foreach ($products as $key => $product) {

@@ -47,7 +47,7 @@
         <script src="{$BASE_URL}javascript/search/livesearch.js" type="text/javascript"></script>
 
         <form>
-          <input type="text" id="caixapesquisa" size="30" onkeyup="showResult(this.value)" />
+          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
           <div id="livesearch"></div>
         </form>
         </div>
