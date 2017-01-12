@@ -19,7 +19,7 @@
 				  </tr>
 					<form method="POST" action="removerdocarrinho.php">
 
-				   <?php echo "cenas"; ?>
+				  
 						{foreach $products as $product}
 
 					    <tr>

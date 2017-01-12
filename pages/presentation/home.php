@@ -17,5 +17,5 @@
  
 
    $smarty->assign('products', $products);
-  $smarty->display('products/list.tpl');
+  $smarty->display('products/listSquare.tpl');
 ?>

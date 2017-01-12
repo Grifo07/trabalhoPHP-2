@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{$BASE_URL}css/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/menus/showmenu.js" type="text/javascript"></script>
-
+    <link rel="stylesheet" href="{$BASE_URL}font-awesome-4.7.0/css/font-awesome.min.css">
   
 
   </head>
