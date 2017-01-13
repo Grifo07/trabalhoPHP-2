@@ -15,12 +15,6 @@
    include ($BASE_DIR . 'actions/products/product_list_creator.php'); //MUDAR QUANDO SE FIZER ADMIN
 
 
-   $_CART = 0;
-  if (isset($_SESSION['cart'])) {
-    foreach ($_SESSION['cart'] as $quantity) {
-      $_CART += $quantity;
-    }
-  }
 
 
   $smarty = new Smarty;

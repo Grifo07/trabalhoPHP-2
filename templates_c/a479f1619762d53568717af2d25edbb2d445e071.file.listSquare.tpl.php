@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-13 13:09:28
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-13 16:06:26
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:329776875878d1886a9b68-13907037%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a479f1619762d53568717af2d25edbb2d445e071' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl',
-      1 => 1484312874,
+      1 => 1484323529,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_5878d1888cffc8_21626968',
   'variables' => 
   array (
     'products' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'product' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_5878d1888cffc8_21626968',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5878d1888cffc8_21626968')) {function content_5878d1888cffc8_21626968($_smarty_tpl) {?>	<?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -59,8 +59,7 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
  €</strong></p> 
 						  </div>
 
-
-						            <button class="botaocompra"><span><i class="fa fa-cart-plus fa-lg"></i></span></button>
+						            <button onclick="addToCart('1');" class="botaocompra"><span><i class="fa fa-cart-plus fa-lg"></i></span></button>
 
 						</div>
 					    
@@ -123,6 +122,9 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
 
 	</div>
 
+
+	<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/cart/cart.js" type="text/javascript"></script>
 
 	<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

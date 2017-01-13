@@ -22,8 +22,7 @@
 						    <p><strong>{$product.preco} €</strong></p> 
 						  </div>
 
-
-						            <button class="botaocompra"><span><i class="fa fa-cart-plus fa-lg"></i></span></button>
+						            <button onclick="addToCart('1');" class="botaocompra"><span><i class="fa fa-cart-plus fa-lg"></i></span></button>
 
 						</div>
 					    
@@ -70,6 +69,8 @@
 
 	</div>
 
+
+	<script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
 
 	{include file='common/footer.tpl'}
 	 
