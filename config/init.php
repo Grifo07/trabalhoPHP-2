@@ -1,9 +1,9 @@
 <?php
-  session_set_cookie_params(3600, '/~ee12046/');
+  session_set_cookie_params(3600, '/~ee12113/');
   session_start();
 
   $BASE_DIR = dirname(__DIR__).'/';
-  $BASE_URL = '//gnomo.fe.up.pt/~ee12046/trabalhosSiem/trabalhoPHP-2/';
+  $BASE_URL = '//gnomo.fe.up.pt/~ee12113/trabalhosSiem/trabalhoPHP-2/';
 
     $conn = new PDO('pgsql:host=db.fe.up.pt; dbname=siem1639', 'siem1639', '123456');
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -14,6 +14,13 @@
   
    include ($BASE_DIR . 'actions/products/product_list_creator.php'); //MUDAR QUANDO SE FIZER ADMIN
 
+
+   $_CART = 0;
+  if (isset($_SESSION['cart'])) {
+    foreach ($_SESSION['cart'] as $quantity) {
+      $_CART += $quantity;
+    }
+  }
 
 
   $smarty = new Smarty;

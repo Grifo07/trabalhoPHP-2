@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-12-14 15:45:19
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-13 13:09:28
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/menu_logged_out.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:406530419584562060c2010-55007801%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bc4fb85acef7294d94d2c0cd8f728814869afc0b' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/menu_logged_out.tpl',
-      1 => 1481730280,
+      1 => 1484104794,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,9 @@ pages/users/register.php">Register</a> -->
 actions/users/login.php" method="post">
 		  <div class="caixastexto"> <input type="text" placeholder="username" name="username"> </div>
 		  <div class="caixastexto"> <input type="password" placeholder="password" name="password"> </div>
-		  <input id="botao_login" type="submit" value="Login">  <input id="botao_registar" type="submit" value="Registar"></div>
+		  <input id="botao_login" type="submit" value="Login">
+		  <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/users/register.php" style="font-size: 92%; padding: 10%;">Registar</a>
 		</form>
 
 		</div>

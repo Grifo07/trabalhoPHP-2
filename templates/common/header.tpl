@@ -55,14 +55,24 @@
 
         </div>
        </div>
-       </div>
-       
+
         {if $USERNAME}
         {include file='common/menu_logged_in.tpl'}
-      {else}
+         {else}
         {include file='common/menu_logged_out.tpl'}
-      {/if}
+        {/if}
     
+          <nav id="navigation">
+           <ul class="parent">
+            <li id="carrinho">Carrinho
+                <ul class="child">
+                  <li><a href="http://www.google.pt">Ver Carrinho</a></li>
+                  <li><a href="http://www.google.pt">Pagamento</a></li>
+                </ul>
+            </li>
+          </ul>
+          </nav>
+
     </header>
    <body>
  

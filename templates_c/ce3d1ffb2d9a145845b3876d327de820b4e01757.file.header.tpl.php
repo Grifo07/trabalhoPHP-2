@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-12-18 23:54:48
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-13 13:42:00
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9325178265845620603d9f5-16858531%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce3d1ffb2d9a145845b3876d327de820b4e01757' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1482101685,
+      1 => 1484314916,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,8 @@ css/style.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/menus/showmenu.js" type="text/javascript"></script>
-
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+font-awesome-4.7.0/css/font-awesome.min.css">
   
 
   </head>
@@ -78,7 +79,7 @@ images/assets/headerLogo.png"></a>
 javascript/search/livesearch.js" type="text/javascript"></script>
 
         <form>
-          <input type="text" id="caixapesquisa" size="30" onkeyup="showResult(this.value)" />
+          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
           <div id="livesearch"></div>
         </form>
         </div>
@@ -86,16 +87,26 @@ javascript/search/livesearch.js" type="text/javascript"></script>
 
         </div>
        </div>
-       </div>
-       
+
         <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
         <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-      <?php } else { ?>
+         <?php } else { ?>
         <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-      <?php }?>
+        <?php }?>
     
+          <nav id="navigation">
+           <ul class="parent">
+            <li id="carrinho">Carrinho
+                <ul class="child">
+                  <li><a href="http://www.google.pt">Ver Carrinho</a></li>
+                  <li><a href="http://www.google.pt">Pagamento</a></li>
+                </ul>
+            </li>
+          </ul>
+          </nav>
+
     </header>
    <body>
  

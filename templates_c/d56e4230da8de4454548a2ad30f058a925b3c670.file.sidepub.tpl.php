@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-12-18 20:45:30
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-13 13:09:28
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/publicity/sidepub.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2251862945856de3b9d7694-77078023%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd56e4230da8de4454548a2ad30f058a925b3c670' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/publicity/sidepub.tpl',
-      1 => 1482090288,
+      1 => 1484104794,
       2 => 'file',
     ),
   ),
@@ -27,4 +27,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		
 		<img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 images/publicity/sides/titanx_side.png" style="width: 100%"></img>
+
 	</div><?php }} ?>
