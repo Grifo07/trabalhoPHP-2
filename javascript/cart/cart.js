@@ -1,7 +1,4 @@
 
-function setCookie(cname,cvalue,exdays) {
-    document.cookie = cname + "=" + cvalue + ";" + exdays + ";path=/";
-}
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -28,36 +25,51 @@ function checkCookie() {
     }
 }
 
-function addToCart(id){
-alert("ola0");
+function addToCart(id, preco){
+
   var existe = checkCookie();
 
     if(existe == 0){
-     var arr = {};           
-        arr['item'] = [];          
-        arr['item'].push(id);
-        var json = JSON.stringify(arr);
-        alert(json);
-        alert("nice1");
-        setCookie("cart", json, 33);
-        alert("nice3");
-    }
-    else{
-        alert("existe e fez check");
-        var teste = getCookie("cart");
-        alert("vao emtrar");
-        var arr2 = JSON.parse(teste);
-        alert(teste[0]);
-    
-       
+     var arritem = {};           
+        arritem['item'] = [];                       //id
+        arritem['item'].push(id);
 
+        arritem['preco'] = [];                       //preco
+        arritem['preco'].push(preco);
+
+        arritem['quantidade'] = [];                       //preco
+        arritem['quantidade'].push('1');
+
+        $.cookie('cart', JSON.stringify(arritem));
+        alert("cookie adicionado!");
+    }
+     else {
+        var arritem = JSON.parse($.cookie('cart'));
+
+
+        for (var i = 0; i < arritem['item'].length; i++) {
+            if(arritem['item'][i] == id){
+               var aux =  parseInt(arritem['quantidade'][i]);
+               aux = aux + 1;
+               arritem['quantidade'][i] = aux;           //ADICIONA 1 A QUANTIDADE SE EXISTIR ID
+                alert('entra');
+                alert(arritem['quantidade'][i]);
+                var semaforo = 1;
+                break;
+            }  
+        }
+            if(semaforo != 1){
+                arritem['item'].push(id);
+                arritem['preco'].push(preco);       //CASO NAO EXISTA DUPLICADO
+                arritem['quantidade'].push('1');
+                semaforo = 0;
+            }
+        
+        $.cookie('cart', JSON.stringify(arritem));
+        alert("Item adicionado!");
+     
 
     }
 
 }
 
-function addIdtoArray(id){
-
-
-
-}

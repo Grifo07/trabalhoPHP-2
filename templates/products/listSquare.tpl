@@ -22,7 +22,7 @@
 						    <p><strong>{$product.preco} €</strong></p> 
 						  </div>
 
-						            <button onclick="addToCart('1');" class="botaocompra"><span><i class="fa fa-cart-plus fa-lg"></i></span></button>
+						            <button onclick="addToCart('1', '200');" class="botaocompra"><span><i class="fa fa-cart-plus fa-lg"></i></span></button>
 
 						</div>
 					    
@@ -69,8 +69,9 @@
 
 	</div>
 
-
+	<script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
 	<script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
+	<script src="{$BASE_URL}javascript/cart/cartchecker.js" type="text/javascript"></script>
 
 	{include file='common/footer.tpl'}
 	 
