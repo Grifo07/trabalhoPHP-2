@@ -1,9 +1,6 @@
 
 function setCookie(cname,cvalue,exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";" + exdays + ";path=/";
 }
 
 function getCookie(cname) {
@@ -25,35 +22,42 @@ function getCookie(cname) {
 function checkCookie() {
     var user=getCookie("cart");
     if (user != "") {
-        alert("Welcome again " + user);
+        return 1;
     } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-           setCookie("username", user, 30);
-       }
+        return 0;
     }
 }
 
 function addToCart(id){
+alert("ola0");
+  var existe = checkCookie();
 
-	// var arr = [];
-	// var cart = getCookie('cart');
-	// alert("ola");
-	
-	// var arr = JSON.parse(cart);
-	// alert(arr);
-	// arr.push("id");
+    if(existe == 0){
+     var arr = {};           
+        arr['item'] = [];          
+        arr['item'].push(id);
+        var json = JSON.stringify(arr);
+        alert(json);
+        alert("nice1");
+        setCookie("cart", json, 33);
+        alert("nice3");
+    }
+    else{
+        alert("existe e fez check");
+        var teste = getCookie("cart");
+        alert("vao emtrar");
+        var arr2 = JSON.parse(teste);
+        alert(teste[0]);
+    
+       
 
-	// var cart_str = JSON.stringify(arr);
-	// var cart_str = ['1', '2', '3'];
-alert("hi");
-	var myJSON = '{ "item1":3, "item2":2, "item3":1 }';
-	var myObj = JSON.parse(myJSON);
-	myObj.item1 = id;
-	alert(myObj.item1);
+
+    }
+
+}
+
+function addIdtoArray(id){
 
 
 
-	// setCookie('cart', cart_str, 30);
-	// checkCookie();
 }
