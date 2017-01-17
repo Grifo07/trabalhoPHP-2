@@ -1,4 +1,4 @@
-window.onload = function() { updateCart(); };
+window.onload = function() { updateCart();};
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -88,5 +88,16 @@ function addToCart(id, preco){
 
     }
     updateCart();
+}
+
+function numCards() {
+        //alert("ola");
+        //alert(screen.width);
+        var n;
+        var top = (0.7*screen.width);
+        var bot = (200+(screen.width*0.02));
+        n = top/bot;
+        //alert(Math.floor(n));
+        //return Math.floor(n);
 }
 
