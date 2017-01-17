@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 15:35:42
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 15:59:39
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9325178265845620603d9f5-16858531%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce3d1ffb2d9a145845b3876d327de820b4e01757' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1484626478,
+      1 => 1484668778,
       2 => 'file',
     ),
   ),
@@ -100,7 +100,8 @@ javascript/search/livesearch.js" type="text/javascript"></script>
            <ul class="parent">
             <li id="carrinho">Carrinho: <div id="precototal" onload="updateCart()"></div>
                 <ul class="child">
-                  <li><a href="http://www.google.pt">Ver Carrinho</a></li>
+                  <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/cart/seeCart.php">Ver Carrinho</a></li>
                   <li><a href="http://www.google.pt">Pagamento</a></li>
                 </ul>
             </li>

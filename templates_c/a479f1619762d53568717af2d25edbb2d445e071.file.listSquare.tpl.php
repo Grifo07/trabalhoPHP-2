@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 15:35:42
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 15:59:09
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:329776875878d1886a9b68-13907037%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a479f1619762d53568717af2d25edbb2d445e071' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl',
-      1 => 1484626478,
+      1 => 1484668733,
       2 => 'file',
     ),
   ),

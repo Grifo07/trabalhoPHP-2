@@ -66,7 +66,7 @@
            <ul class="parent">
             <li id="carrinho">Carrinho: <div id="precototal" onload="updateCart()"></div>
                 <ul class="child">
-                  <li><a href="{BASE_URL}action/cart/seeCart.php">Ver Carrinho</a></li>
+                  <li><a href="{$BASE_URL}actions/cart/seeCart.php">Ver Carrinho</a></li>
                   <li><a href="http://www.google.pt">Pagamento</a></li>
                 </ul>
             </li>
