@@ -97,6 +97,18 @@
 
 	<script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
 	<script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
+	<script>
+	window.onload = function() { numCards(); };
+	function numCards() {
+		alert("ola");
+	    alert(screen.width);
+	    var n;
+	    var top = (0.7*screen.width);
+	    var bot = (200+(screen.width*0.02));
+	    n = top/bot;
+	    alert(Math.floor(n));
+		}
+	</script>
 
 	{include file='common/footer.tpl'}
 	 
