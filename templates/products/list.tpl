@@ -49,7 +49,5 @@
 
 </div>
 
-<script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
-<script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
 {include file='common/footer.tpl'}
  
