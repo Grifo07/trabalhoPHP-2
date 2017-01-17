@@ -35,6 +35,26 @@
     return $stmt->fetchAll();
   }
 
+  function getProductsFromCookie($ids) {
+   global $conn;
+
+   $str1 = 'SELECT * 
+           FROM produtos
+           WHERE';
+ 
+   for($i=0 ; $i < sizeof($ids)-1; $i++){
+
+    $str1 = $str1 . " id = ? OR";
+    
+   }
+   
+   $str1 = $str1 . " id = ?;";
+
+   $stmt = $conn->prepare($str1);
+   $stmt->execute($ids);
+   return $stmt->fetchAll();
+ }
+
   
 //   function getUserTweets($username) {
 //     global $conn;

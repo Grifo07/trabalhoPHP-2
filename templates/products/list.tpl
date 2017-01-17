@@ -15,7 +15,7 @@
 
 			<table class="tabelapesquisa">
 				  <tr>
-				    <th width="14.2857%">Imagem</th><th width="14.2857%">Nome</th><th width="14.2857%">Marca</th><th width="14.2857%">Preço p/unidade</th><th width="14.2857%">Categoria</th><th width="14.2857%">Quantidade</th><th width="14.2857%">Adicionar ao carrinho</th>
+				    <th width="14.2857%">Imagem</th><th width="14.2857%">Nome</th><th width="14.2857%">Marca</th><th width="14.2857%">Preço p/unidade</th><th width="14.2857%">Categoria</th><th width="14.2857%">Quantidade</th><th width="14.2857%">Retirar do Carrinho</th>
 				  </tr>
 					<form method="POST" action="removerdocarrinho.php">
 
@@ -28,8 +28,8 @@
 					    	<td width="14.2857%">{$product.marca}</td>
 					    	<td width="14.2857%">{$product.preco}€</td>
 					    	<td width="14.2857%">{$product.categoria}</td>
-					    	<td width="14.2857%">{$product.qtstock}</td>
-					    	<td width="14.2857%"><button type = "submit" name="idcarrinho" value="{$product.id}"><img src="{$BASE_URL}images/assets/cart.png" class="x_remove_table" /></button> </td>
+					    	<td width="14.2857%">{$product.quantidadecarrinho}</td>
+					    	<td width="14.2857%"><button type = "submit" name="idcarrinho" value="{$product.id}"><img src="{$BASE_URL}images/assets/x.png" class="x_remove_table" /></button> </td>
 
 					    </tr>
 					
@@ -49,6 +49,7 @@
 
 </div>
 
-
+<script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
+<script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
 {include file='common/footer.tpl'}
  

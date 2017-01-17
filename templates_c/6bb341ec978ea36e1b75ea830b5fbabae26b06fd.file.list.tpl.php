@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-12-19 00:07:44
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 17:29:17
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10244098555850aaf6274754-79371696%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6bb341ec978ea36e1b75ea830b5fbabae26b06fd' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl',
-      1 => 1482102462,
+      1 => 1484674156,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <div class="linha">
 
-<?php echo $_smarty_tpl->getSubTemplate ('publicity/sidepub.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 	<div class="coluna" style="width: 70%;">
@@ -45,11 +44,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 			<table class="tabelapesquisa">
 				  <tr>
-				    <th width="14.2857%">Imagem</th><th width="14.2857%">Nome</th><th width="14.2857%">Marca</th><th width="14.2857%">Preço p/unidade</th><th width="14.2857%">Categoria</th><th width="14.2857%">Quantidade</th><th width="14.2857%">Adicionar ao carrinho</th>
+				    <th width="14.2857%">Imagem</th><th width="14.2857%">Nome</th><th width="14.2857%">Marca</th><th width="14.2857%">Preço p/unidade</th><th width="14.2857%">Categoria</th><th width="14.2857%">Quantidade</th><th width="14.2857%">Retirar do Carrinho</th>
 				  </tr>
 					<form method="POST" action="removerdocarrinho.php">
 
-				   <<?php ?>?php echo "cenas"; ?<?php ?>>
+				  
 						<?php  $_smarty_tpl->tpl_vars['product'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['product']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['products']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['product']->key => $_smarty_tpl->tpl_vars['product']->value) {
@@ -69,11 +68,11 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
 €</td>
 					    	<td width="14.2857%"><?php echo $_smarty_tpl->tpl_vars['product']->value['categoria'];?>
 </td>
-					    	<td width="14.2857%"><?php echo $_smarty_tpl->tpl_vars['product']->value['qtstock'];?>
+					    	<td width="14.2857%"><?php echo $_smarty_tpl->tpl_vars['product']->value['quantidadecarrinho'];?>
 </td>
 					    	<td width="14.2857%"><button type = "submit" name="idcarrinho" value="<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
 "><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-images/assets/cart.png" class="x_remove_table" /></button> </td>
+images/assets/x.png" class="x_remove_table" /></button> </td>
 
 					    </tr>
 					
@@ -88,13 +87,15 @@ images/assets/cart.png" class="x_remove_table" /></button> </td>
 
 		</div>
 
-<?php echo $_smarty_tpl->getSubTemplate ('publicity/sidepub.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 
 </div>
 
-
+<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/cart/jquery.cookie.js" type="text/javascript"></script>
+<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/cart/cart.js" type="text/javascript"></script>
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
  <?php }} ?>
