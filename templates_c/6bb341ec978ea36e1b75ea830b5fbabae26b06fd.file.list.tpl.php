@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 17:29:17
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 18:07:40
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10244098555850aaf6274754-79371696%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6bb341ec978ea36e1b75ea830b5fbabae26b06fd' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl',
-      1 => 1484674156,
+      1 => 1484676436,
       2 => 'file',
     ),
   ),
@@ -92,10 +92,6 @@ images/assets/x.png" class="x_remove_table" /></button> </td>
 
 </div>
 
-<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-javascript/cart/jquery.cookie.js" type="text/javascript"></script>
-<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-javascript/cart/cart.js" type="text/javascript"></script>
 <?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
  <?php }} ?>

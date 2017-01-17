@@ -1,32 +1,38 @@
 
 <?php
   include_once('../../config/init.php');
-
+$semaforo = 0;
 $array = array();
 $qtcarrinho = array();
 
-$jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator(json_decode($_COOKIE["cart"], TRUE)),
-    RecursiveIteratorIterator::SELF_FIRST);
+  if(!isset($_COOKIE['cart'])) {
+     $semaforo = 1;
+  }
+if ($semaforo==0){
 
-foreach ($jsonIterator as $key => $val) {
-    if(is_array($val)) {
-        if(strcmp("$key","item")==0) {
-          foreach ($val as $key => $vals) {
-           array_push($array, $vals);
-          }
+        $jsonIterator = new RecursiveIteratorIterator(
+            new RecursiveArrayIterator(json_decode($_COOKIE["cart"], TRUE)),
+            RecursiveIteratorIterator::SELF_FIRST);
+
+        foreach ($jsonIterator as $key => $val) {
+            if(is_array($val)) {
+                if(strcmp("$key","item")==0) {
+                  foreach ($val as $key => $vals) {
+                   array_push($array, $vals);
+                  }
+                }
+
+                if(strcmp("$key","quantidade")==0) {
+                  foreach ($val as $key => $vals) {
+                   array_push($qtcarrinho, $vals);
+                  }
+                }
+           }
         }
 
-        if(strcmp("$key","quantidade")==0) {
-          foreach ($val as $key => $vals) {
-           array_push($qtcarrinho, $vals);
-          }
-        }
-   }
+        $products = getProductsFromCookie($array);
 }
-    echo $array[1];
-  
-   $products = getProductsFromCookie($array);
+
 
     foreach ($products as $key => $product) {
 
