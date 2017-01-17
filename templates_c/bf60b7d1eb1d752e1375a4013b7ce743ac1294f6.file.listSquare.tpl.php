@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 17:30:26
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 17:44:43
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12284132435876d80b51b618-26269655%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf60b7d1eb1d752e1375a4013b7ce743ac1294f6' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl',
-      1 => 1484674223,
+      1 => 1484675079,
       2 => 'file',
     ),
   ),
@@ -165,7 +165,7 @@ javascript/cart/jquery.cookie.js" type="text/javascript"></script>
 	<script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/cart/cart.js" type="text/javascript"></script>
 	<script>
-	window.onload = function() { numCards(); };
+	
 	function numCards() {
 		alert("ola");
 	    alert(screen.width);
@@ -174,11 +174,6 @@ javascript/cart/cart.js" type="text/javascript"></script>
 	    var bot = (200+(screen.width*0.02));
 	    n = top/bot;
 	    alert(Math.floor(n));
-	    //n = ((0.7*screen.width)/(200+(screen.width*0.02));
-	    // alert(Math.floor(n));
-	    // alert (Math.floor(n));
-	    //return 4;
-	    
 		}
 	</script>
 
