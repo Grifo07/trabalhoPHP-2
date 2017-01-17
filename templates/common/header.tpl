@@ -64,7 +64,7 @@
     
           <nav id="navigation">
            <ul class="parent">
-            <li id="carrinho">Carrinho
+            <li id="carrinho">Carrinho: <div id="precototal" onload="updateCart()"></div>
                 <ul class="child">
                   <li><a href="http://www.google.pt">Ver Carrinho</a></li>
                   <li><a href="http://www.google.pt">Pagamento</a></li>

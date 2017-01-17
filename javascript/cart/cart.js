@@ -1,4 +1,4 @@
-
+window.onload = function() { updateCart(); };
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -16,7 +16,7 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
+function isThereCookie() {
     var user=getCookie("cart");
     if (user != "") {
         return 1;
@@ -25,9 +25,30 @@ function checkCookie() {
     }
 }
 
-function addToCart(id, preco){
+function updateCart() {
 
-  var existe = checkCookie();
+    var existecookie = isThereCookie();
+    var soma=0;
+    if(existecookie == 1){
+         var arrayitems = {};           
+            var arrayitems = JSON.parse($.cookie('cart'));
+        
+        
+
+        for (var i = 0; i < arrayitems['item'].length; i++) {
+
+            soma = soma +parseInt(arrayitems['quantidade'][i]) * parseInt(arrayitems['preco'][i]);
+        }
+
+    }
+
+    document.getElementById("precototal").textContent=soma + " €";
+
+    
+}
+
+function addToCart(id, preco){
+  var existe = isThereCookie();
 
     if(existe == 0){
      var arritem = {};           
@@ -41,22 +62,19 @@ function addToCart(id, preco){
         arritem['quantidade'].push('1');
 
         $.cookie('cart', JSON.stringify(arritem));
-        alert("cookie adicionado!");
     }
      else {
         var arritem = JSON.parse($.cookie('cart'));
-
+        var semaforo = 0;
 
         for (var i = 0; i < arritem['item'].length; i++) {
             if(arritem['item'][i] == id){
                var aux =  parseInt(arritem['quantidade'][i]);
                aux = aux + 1;
                arritem['quantidade'][i] = aux;           //ADICIONA 1 A QUANTIDADE SE EXISTIR ID
-                alert('entra');
-                alert(arritem['quantidade'][i]);
-                var semaforo = 1;
+                semaforo = 1;
                 break;
-            }  
+            }
         }
             if(semaforo != 1){
                 arritem['item'].push(id);
@@ -66,10 +84,9 @@ function addToCart(id, preco){
             }
         
         $.cookie('cart', JSON.stringify(arritem));
-        alert("Item adicionado!");
      
 
     }
-
+    updateCart();
 }
 

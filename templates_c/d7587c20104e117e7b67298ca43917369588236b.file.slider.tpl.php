@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-11 01:25:05
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 04:12:09
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/publicity/slider.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:155250140858587d4ac0c3d2-72883194%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd7587c20104e117e7b67298ca43917369588236b' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/publicity/slider.tpl',
-      1 => 1484097904,
+      1 => 1484626326,
       2 => 'file',
     ),
   ),
@@ -28,15 +28,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="slidercontainer" >
  <a href="http://www.google.pt">  
  <img class="mySlides" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-images/publicity/slider/honor8.jpg" style="width:100%; height: 100%;">
+images/publicity/slider/honor8.jpg" style="width:100%; height: auto;">
  </a>
   <a href="http://www.google.pt"> 
   <img class="mySlides" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-images/publicity/slider/asus.jpg" style="width:100%; height: 100%;">
+images/publicity/slider/asus.jpg" style="width:100%; height: auto;">
   </a>
    <a href="http://www.google.pt"> 
   <img class="mySlides" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-images/publicity/slider/titanx.jpg" style="width:100%; height: 100%;">
+images/publicity/slider/titanx.jpg" style="width:100%; height: auto;">
    </a>
 </div>
 <?php echo $_smarty_tpl->getSubTemplate ('publicity/sidepubright.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

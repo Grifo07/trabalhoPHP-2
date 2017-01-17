@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-12 02:34:43
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 00:01:40
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:156550731958494bfdf04343-41678115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff54e1bf05d75421970c86c927979f5487db1539' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1484188479,
+      1 => 1484611273,
       2 => 'file',
     ),
   ),
@@ -87,16 +87,26 @@ javascript/search/livesearch.js" type="text/javascript"></script>
 
         </div>
        </div>
-       </div>
-       
+
         <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
         <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-      <?php } else { ?>
+         <?php } else { ?>
         <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-      <?php }?>
+        <?php }?>
     
+          <nav id="navigation">
+           <ul class="parent">
+            <li id="carrinho">Carrinho: <div id="precototal" onload="updateCart()"></div>
+                <ul class="child">
+                  <li><a href="http://www.google.pt">Ver Carrinho</a></li>
+                  <li><a href="http://www.google.pt">Pagamento</a></li>
+                </ul>
+            </li>
+          </ul>
+          </nav>
+
     </header>
    <body>
  

@@ -16,6 +16,24 @@
     return $stmt->fetchAll();
   }
 
+  function getProductById($id) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT * 
+                            FROM produtos
+                            WHERE id = ? ");
+    $stmt->execute(array($id));
+    return $stmt->fetchAll();
+  }
+
+  function getNProducts($n) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT *
+                            FROM produtos
+                            ORDER BY RANDOM()
+                            LIMIT ?");
+    $stmt->execute(array($n));
+    return $stmt->fetchAll();
+  }
 
   
 //   function getUserTweets($username) {

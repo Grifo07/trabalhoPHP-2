@@ -156,6 +156,8 @@ li{
    
    margin-top: 55px;
     width: 10%;
+    display: inline-block;
+    z-index: 2;
 }
 
 
@@ -360,6 +362,8 @@ float: middle;
     margin-left: 2%;
     margin-bottom: 2%;
     background: white;
+    z-index: 1;
+    position: relative;
 }
 
 .card img {
@@ -393,6 +397,8 @@ float: middle;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  z-index: 2;
+  position: relative;
 }
 
 .botaocompra span {
@@ -419,4 +425,10 @@ float: middle;
 .botaocompra:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+#precototal {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
 }
