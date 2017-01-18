@@ -14,4 +14,13 @@
     $stmt->execute(array($username, sha1($password)));
     return $stmt->fetch() == true;
   }
+
+  function getAdressByUsername($username) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT endereco1, endereco2, codpostal, cidade, regiao, pais
+      FROM users
+      WHERE username = ?");
+    $stmt->execute(array($username));
+    return $stmt->fetchAll();
+  }
 ?>

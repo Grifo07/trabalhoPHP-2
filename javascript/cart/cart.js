@@ -1,4 +1,5 @@
-window.onload = function() { updateCart();};
+window.onload = function() { updateCart();
+                             pagamento()};
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -61,7 +62,7 @@ function addToCart(id, preco){
         arritem['quantidade'] = [];                       //preco
         arritem['quantidade'].push('1');
 
-        $.cookie('cart', JSON.stringify(arritem));
+        $.cookie('cart', JSON.stringify(arritem), {path: "/", domain: "gnomo.fe.up.pt"});
     }
      else {
         var arritem = JSON.parse($.cookie('cart'));
@@ -83,21 +84,92 @@ function addToCart(id, preco){
                 semaforo = 0;
             }
         
-        $.cookie('cart', JSON.stringify(arritem));
+        $.cookie('cart', JSON.stringify(arritem), {path: "/", domain: "gnomo.fe.up.pt"});
      
 
     }
     updateCart();
 }
 
-function numCards() {
-        //alert("ola");
-        //alert(screen.width);
-        var n;
-        var top = (0.7*screen.width);
-        var bot = (200+(screen.width*0.02));
-        n = top/bot;
-        //alert(Math.floor(n));
-        //return Math.floor(n);
+function removeFromCart(id){
+  var existe = isThereCookie();
+
+    if(existe == 0){
+        alert("ERRO: Não existe cookie");
+        return;
+    }
+     else {
+        var arritem = JSON.parse($.cookie('cart'));
+        var index = arritem['item'].indexOf(id);
+
+        if (index > -1) {
+            arritem['item'].splice(index, 1);
+            arritem['preco'].splice(index, 1);
+            arritem['quantidade'].splice(index, 1);
+        }
+        
+        $.cookie('cart', JSON.stringify(arritem), {path: "/", domain: "gnomo.fe.up.pt"});
+     
+
+    }
+    location.reload();
+}
+
+function pagamento() {
+    var existe = isThereCookie();
+    var pagPreco = 0;
+    var pagQuant = 0;
+    if(existe == 0){
+        
+        return;
+    }
+     else {
+        var arritem = JSON.parse($.cookie('cart'));
+
+        for (var i = 0; i < arritem['item'].length; i++) {
+            pagPreco = pagPreco +parseInt(arritem['quantidade'][i]) * parseInt(arritem['preco'][i]);
+            pagQuant = pagQuant + parseInt(arritem['quantidade'][i]);
+        }
+     
+
+    }
+
+
+    document.getElementById("pagPreco").textContent=pagPreco;
+    document.getElementById("pagQuant").textContent=pagQuant;
+}
+
+function checkout() {
+
+    var existe = isThereCookie();
+    var link = "//gnomo.fe.up.pt/~ee12046/trabalhosSiem/trabalhoPHP-2/actions/cart/encom.php?ids="
+    var ids = "";
+    var quantidades = "";
+    if(existe == 0){
+        alert("ERRO: Não existe cookie");
+        return;
+    }
+    else {
+        var arritem = JSON.parse($.cookie('cart'));
+
+        for (var i = 0; i < arritem['item'].length; i++) {
+
+            if(i==arritem['item'].length-1) {
+                ids = ids + arritem['item'][i];
+                quantidades = quantidades + arritem['quantidade'][i];
+            } else {
+                ids = ids + arritem['item'][i] + ",";
+                quantidades = quantidades + arritem['quantidade'][i] + ",";
+            }
+        }
+     
+
+    }
+    link = link + ids + "&" + "quantidades=" + quantidades;
+
+    $.removeCookie('cart', {path: "/", domain: "gnomo.fe.up.pt"});
+
+    window.location.href = link; 
+
 }
 

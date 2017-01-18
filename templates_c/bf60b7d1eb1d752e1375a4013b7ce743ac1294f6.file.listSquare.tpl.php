@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 19:27:23
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-18 01:21:32
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12284132435876d80b51b618-26269655%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf60b7d1eb1d752e1375a4013b7ce743ac1294f6' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl',
-      1 => 1484681100,
+      1 => 1484700104,
       2 => 'file',
     ),
   ),
@@ -47,17 +47,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="linha">
 				
 				<?php  $_smarty_tpl->tpl_vars['product'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['product']->_loop = false;
- $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['products']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['foo']['index']=-1;
 foreach ($_from as $_smarty_tpl->tpl_vars['product']->key => $_smarty_tpl->tpl_vars['product']->value) {
 $_smarty_tpl->tpl_vars['product']->_loop = true;
- $_smarty_tpl->tpl_vars['i']->value = $_smarty_tpl->tpl_vars['product']->key;
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['foo']['index']++;
 ?>
-				  <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['foo']['index']==4) {?>
-				    <?php break 1?>
-				  <?php }?>		
+				
 						<div class="card">
 						  <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/products/displayproduct.php?id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>

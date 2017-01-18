@@ -1,7 +1,7 @@
 <?php
   include_once('../../config/init.php');
 
-   $products = getAllProducts();  
+   $products = getNProducts("4");  
 
     foreach ($products as $key => $product) {
 

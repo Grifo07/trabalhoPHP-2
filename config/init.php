@@ -15,7 +15,6 @@
    include ($BASE_DIR . 'actions/products/product_list_creator.php'); //MUDAR QUANDO SE FIZER ADMIN
 
 
-
   $smarty = new Smarty;
   $smarty->template_dir = $BASE_DIR . 'templates/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';

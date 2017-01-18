@@ -432,3 +432,52 @@ float: middle;
     padding: 0;
     display: inline-block;
 }
+
+#pagQuant {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+#pagPreco {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.tabelapagamento {
+    font-family: arial, sans-serif;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    text-align: left;
+    background-color: #B3ACA6;
+    padding: 3% 4%;
+}
+.tabelapagamento h4 {
+    margin: 10px 0 0 0;
+}
+
+#temdados {
+
+    /*padding-left: 5%;*/
+}
+
+#CVC{
+
+    width: 60%;
+}
+
+#NOMECARTAO{
+
+    width: 99%;
+}
+
+#botaopagar{
+
+
+    width: 25%;
+    height: auto;
+    margin-left: 35%; 
+
+}

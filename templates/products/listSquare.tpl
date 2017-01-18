@@ -14,10 +14,8 @@
 				<h2 style="text-align: center;">DESTAQUE</h2>
 				<div class="linha">
 				
-				{foreach from=$products key=i item=product name=foo}
-				  {if $smarty.foreach.foo.index == 4}
-				    {break}
-				  {/if}		
+				{foreach $products as $product}
+				
 						<div class="card">
 						  <a href="{$BASE_URL}pages/products/displayproduct.php?id={$product.id}"><img src="{$BASE_URL}{$product.photo}" alt="Avatar" style="width:100%"></a>
 						  <div class="containercard">
