@@ -31,7 +31,7 @@ if ($semaforo==0){
         }
 
         $products = getProductsFromCookie($array);
-}
+
 
 
     foreach ($products as $key => $product) {
@@ -49,6 +49,7 @@ if ($semaforo==0){
  
 
    $smarty->assign('products', $products);
+   }
   $smarty->display('products/list.tpl');
 
 

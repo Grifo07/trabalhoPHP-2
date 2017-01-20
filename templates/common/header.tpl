@@ -10,6 +10,7 @@
     <script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
     <link rel="stylesheet" href="{$BASE_URL}font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
   
 
   </head>

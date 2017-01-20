@@ -54,8 +54,16 @@
    $stmt->execute($ids);
    return $stmt->fetchAll();
  }
-
  
+ // function getProducts($ids) {
+ //    global $conn;
+ //    $stmt = $conn->prepare("SELECT *
+ //                            FROM produtos
+ //                            WHERE id IN ( ? )");
+ //    $stmt->execute(array($ids));
+ //    return $stmt->fetchAll();
+
+ // }
 
   
 

@@ -107,9 +107,12 @@ function removeFromCart(id){
             arritem['preco'].splice(index, 1);
             arritem['quantidade'].splice(index, 1);
         }
-        
-        $.cookie('cart', JSON.stringify(arritem), {path: "/", domain: "gnomo.fe.up.pt"});
-     
+
+        if (arritem['item'].length == 0) {
+            $.removeCookie('cart', {path: "/", domain: "gnomo.fe.up.pt"});
+        } else {        
+            $.cookie('cart', JSON.stringify(arritem), {path: "/", domain: "gnomo.fe.up.pt"});
+        }
 
     }
     location.reload();
@@ -139,12 +142,14 @@ function pagamento() {
     document.getElementById("pagQuant").textContent=pagQuant;
 }
 
+
 function checkout() {
 
     var existe = isThereCookie();
     var link = "//gnomo.fe.up.pt/~ee12046/trabalhosSiem/trabalhoPHP-2/actions/cart/encom.php?ids="
     var ids = "";
     var quantidades = "";
+    var preco = 0;
     if(existe == 0){
         alert("ERRO: Não existe cookie");
         return;
@@ -157,19 +162,23 @@ function checkout() {
             if(i==arritem['item'].length-1) {
                 ids = ids + arritem['item'][i];
                 quantidades = quantidades + arritem['quantidade'][i];
+                preco = preco +parseInt(arritem['quantidade'][i]) * parseInt(arritem['preco'][i]);
             } else {
                 ids = ids + arritem['item'][i] + ",";
                 quantidades = quantidades + arritem['quantidade'][i] + ",";
+                preco = preco +parseInt(arritem['quantidade'][i]) * parseInt(arritem['preco'][i]);
             }
         }
      
 
     }
-    link = link + ids + "&" + "quantidades=" + quantidades;
+    link = link + ids + "&quantidades=" + quantidades + "&preco=" + preco;
 
     $.removeCookie('cart', {path: "/", domain: "gnomo.fe.up.pt"});
 
     window.location.href = link; 
 
 }
+
+
 

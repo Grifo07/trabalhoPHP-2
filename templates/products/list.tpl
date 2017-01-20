@@ -41,7 +41,11 @@
 			</table>
 
 			<div class="linha" style="margin: 1%">
-			<a href="{$BASE_URL}pages/cart/checkout.php" style="float: right; color: black;">Checkout >></a>
+			{if $USERNAME}
+				<a href="{$BASE_URL}pages/cart/checkout.php" style="float: right; color: black;">Checkout >></a>
+			{else}
+				<a href="#" onclick="return alert('Faça login antes realizar uma compra')" style="float: right; color: black;">Checkout >></a>
+			{/if}
 			</div>
 
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-18 02:30:10
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-20 00:26:50
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:211755069458587d4a76b085-09432706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6456d6c9207915e5c5d06bf9c07b6a17fbeea9d4' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl',
-      1 => 1484706598,
+      1 => 1484872006,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'products' => 0,
     'BASE_URL' => 0,
     'product' => 0,
+    'USERNAME' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -87,8 +88,12 @@ images/assets/x.png" class="x_remove_table" /></button> </td>
 			</table>
 
 			<div class="linha" style="margin: 1%">
-			<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+			<?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+				<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/cart/checkout.php" style="float: right; color: black;">Checkout >></a>
+			<?php } else { ?>
+				<a href="#" onclick="return alert('Faça login antes realizar uma compra')" style="float: right; color: black;">Checkout >></a>
+			<?php }?>
 			</div>
 
 
