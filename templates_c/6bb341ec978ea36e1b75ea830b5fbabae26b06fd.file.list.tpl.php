@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 18:07:40
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-23 22:58:22
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10244098555850aaf6274754-79371696%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6bb341ec978ea36e1b75ea830b5fbabae26b06fd' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl',
-      1 => 1484676436,
+      1 => 1485212218,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'products' => 0,
     'BASE_URL' => 0,
     'product' => 0,
+    'USERNAME' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -46,8 +47,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				  <tr>
 				    <th width="14.2857%">Imagem</th><th width="14.2857%">Nome</th><th width="14.2857%">Marca</th><th width="14.2857%">Preço p/unidade</th><th width="14.2857%">Categoria</th><th width="14.2857%">Quantidade</th><th width="14.2857%">Retirar do Carrinho</th>
 				  </tr>
-					<form method="POST" action="removerdocarrinho.php">
-
+					
 				  
 						<?php  $_smarty_tpl->tpl_vars['product'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['product']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['products']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -56,10 +56,13 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
 ?>
 
 					    <tr>
-					    	<td width="14.2857%"> <img style="height: 75px; width: auto;" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+					    	<td width="14.2857%"><a id="linktabela" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/products/displayproduct.php?id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+"><img style="height: 75px; width: auto;" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 <?php echo $_smarty_tpl->tpl_vars['product']->value['photo'];?>
-" class="imagens" /> </td>
-					    	<td width="14.2857%"><a id="linktabela" href="produto.php?id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+" class="imagens" /></a></td>
+					    	<td width="14.2857%"><a id="linktabela" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/products/displayproduct.php?id=<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['product']->value['nome'];?>
 </a></td>
 					    	<td width="14.2857%"><?php echo $_smarty_tpl->tpl_vars['product']->value['marca'];?>
@@ -70,19 +73,28 @@ $_smarty_tpl->tpl_vars['product']->_loop = true;
 </td>
 					    	<td width="14.2857%"><?php echo $_smarty_tpl->tpl_vars['product']->value['quantidadecarrinho'];?>
 </td>
-					    	<td width="14.2857%"><button type = "submit" name="idcarrinho" value="<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
-"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+					    	<td width="14.2857%"><button type = "submit" name="idcarrinho" onclick="removeFromCart(<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+);"><img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 images/assets/x.png" class="x_remove_table" /></button> </td>
 
 					    </tr>
 					
 				 		<?php } ?>
 
-				  </form>
+				 		
+
 				  
 							  
 			</table>
-	
+
+			<div class="linha" style="margin: 1%">
+			<?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+				<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/cart/checkout.php" style="float: right; color: black;">Checkout >></a>
+			<?php } else { ?>
+				<a href="#" onclick="return alert('Faça login antes realizar uma compra')" style="float: right; color: black;">Checkout >></a>
+			<?php }?>
+			</div>
 
 
 		</div>

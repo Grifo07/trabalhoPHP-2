@@ -53,7 +53,7 @@
 				  </tr>
 				 
 				  <tr>
-				    <td width="100%" colspan="2"><button type = "submit" id="botaopagar" onclick="checkout()" style="float: right; margin-top: 2px;">Efetuar Pagamento</button></td>
+				    <td width="100%" colspan="2"><button type = "submit" id="botaopagar" onclick='checkout("{$BASE_URL}")' style="float: right; margin-top: 2px;">Efetuar Pagamento</button></td>
 				  </tr>
 							  
 				</table>

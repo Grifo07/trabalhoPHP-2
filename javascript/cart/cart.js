@@ -143,10 +143,10 @@ function pagamento() {
 }
 
 
-function checkout() {
+function checkout($baseurl) {
 
     var existe = isThereCookie();
-    var link = "//gnomo.fe.up.pt/~ee12046/trabalhosSiem/trabalhoPHP-2/actions/cart/encom.php?ids="
+    var link = $baseurl + "actions/cart/encom.php?ids=";
     var ids = "";
     var quantidades = "";
     var preco = 0;

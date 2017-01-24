@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 17:58:19
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-23 23:19:16
          compiled from "/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9325178265845620603d9f5-16858531%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce3d1ffb2d9a145845b3876d327de820b4e01757' => 
     array (
       0 => '/usr/users2/mieec2012/ee12113/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1484675210,
+      1 => 1485213529,
       2 => 'file',
     ),
   ),
@@ -41,6 +41,7 @@ javascript/cart/jquery.cookie.js" type="text/javascript"></script>
 javascript/cart/cart.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 font-awesome-4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
   
 
   </head>
@@ -106,7 +107,8 @@ javascript/search/livesearch.js" type="text/javascript"></script>
                 <ul class="child">
                   <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/cart/seeCart.php">Ver Carrinho</a></li>
-                  <li><a href="http://www.google.pt">Pagamento</a></li>
+                  <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/cart/checkout.php">Pagamento</a></li>
                 </ul>
             </li>
           </ul>

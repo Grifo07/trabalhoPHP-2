@@ -23,4 +23,11 @@
     $stmt->execute(array($username));
     return $stmt->fetchAll();
   }
+
+  function getUserByUsername($username){
+     global $conn;
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username= ? ");
+    $stmt->execute(array($username));
+    return $stmt->fetchAll();
+  }
 ?>
