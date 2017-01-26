@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 18:53:06
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 23:30:00
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:156550731958494bfdf04343-41678115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff54e1bf05d75421970c86c927979f5487db1539' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1485456729,
+      1 => 1485473396,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASE_URL' => 0,
     'FORM_VALUES' => 0,
     'USERNAME' => 0,
+    'ERROR_MESSAGES' => 0,
+    'error' => 0,
+    'SUCCESS_MESSAGES' => 0,
+    'success' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -42,6 +46,8 @@ javascript/menus/showmenu.js" type="text/javascript"></script>
 javascript/cart/jquery.cookie.js" type="text/javascript"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/cart/cart.js" type="text/javascript"></script>
+    <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/menus/popup.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
@@ -150,12 +156,35 @@ pages/cart/checkout.php">Pagamento</a></li>
             </li>
           </ul>
           </nav>
-
-          
-
+<font color="#D47404">.</font>
+    
 
     </header>
-   <body>
+    <body>
+
+    <div id="error_messages">
+    <?php  $_smarty_tpl->tpl_vars['error'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['error']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['ERROR_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['error']->key => $_smarty_tpl->tpl_vars['error']->value) {
+$_smarty_tpl->tpl_vars['error']->_loop = true;
+?>
+      <div class="error" style="padding: 10px 15%;margin-top: -5px;"><?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+
+      <button id="lupa" style="float: right; margin-top: -5px;" onclick="closeMsg();"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button></div>
+    <?php } ?>
+    </div>
+    <div id="success_messages">
+    <?php  $_smarty_tpl->tpl_vars['success'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['success']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['SUCCESS_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['success']->key => $_smarty_tpl->tpl_vars['success']->value) {
+$_smarty_tpl->tpl_vars['success']->_loop = true;
+?>
+      <div class="success" style="padding: 10px 15%;"><?php echo $_smarty_tpl->tpl_vars['success']->value;?>
+
+      <button id="lupa" style="float: right; margin-top: -5px;" onclick="closeMsg();"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button></div>
+    <?php } ?>
+    </div>
+   
     <div class="containergeral">
  
 <?php }} ?>

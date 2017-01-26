@@ -35,8 +35,8 @@
 					<div class="coluna" style="width:1%">
 						<p><hr size="450%" width="1" align="center"></p>
 					</div>
-					<div class="coluna" style="width:54%">
-						<p>{$indprod.descricao}</p>
+					<div class="coluna" style="width:54%; white-space: pre-wrap;">
+						<br>{$indprod.descricao}
 					</div>
 
 		</div>

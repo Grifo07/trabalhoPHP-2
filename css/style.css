@@ -4,7 +4,8 @@ html{
 
 
 body {
-    background: #F7F7F7;
+    background: #EBEBEB;
+
     display: inline;
     font-family: arial;
     padding: 0 0 0 0;
@@ -15,6 +16,9 @@ body {
     width: 10%;
 }
 
+table {
+  background: #F5F5F5;
+}
 
 a {
     color: white;
@@ -30,7 +34,7 @@ footer {
     background-color: #D47404;
     width: 100%;
     clear: both;
-    z-index: 10;
+    z-index: 9;
     height: 3em;
     margin-top: 50px;
     position:relative;
@@ -66,7 +70,7 @@ h2{
 
     display: inline-block;
     width: 100%;
-    margin-top: -5px;
+    margin-top: 0px;
     padding: 0 0;
 }
 
@@ -585,3 +589,85 @@ float: middle;
   margin: 0 15%;
 
 }
+
+#sobrenos {
+    padding: 2% 0%;
+    display: inline-block;
+    height: 100%;
+
+}
+
+#colunagrifo{
+
+  width: 30%;
+  display: inline-block;
+
+}
+
+
+#colunaquintao{
+
+  width: 30%;
+  display: inline-block;
+
+}
+
+#grifopic{
+
+  display: block;
+    margin: 0 auto;
+    height: 300px;
+    width: auto;
+
+
+
+}
+
+#quintaopic{
+
+  display: block;
+    margin: 0 auto;
+    height: 300px;
+    width: auto;
+
+
+}
+
+.aboutusbutton{
+
+  background-color: #B3ACA6;
+    color: white;
+    text-align: center; 
+    text-decoration: none;
+
+
+}
+
+
+
+.error {
+  background-color: #FFAAAA;
+  padding: 10px;
+  color: #333;
+  font-weight: bold;
+
+}
+
+.success {
+  background-color: #AAFFAA;
+  padding: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.close {
+  float: right;
+  text-decoration: none;
+  color: #666;
+}
+
+.field_error {
+  color: red;
+  font-size: 70%;
+}
+

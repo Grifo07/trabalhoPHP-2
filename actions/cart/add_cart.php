@@ -8,6 +8,6 @@
 
   $_SESSION['cart'][$prod_id]++;
 
-  $_SESSION['success_message'] = 'Product added to cart!';
+  $_SESSION['success_message'] = 'Produto adicionado com sucesso!';
   header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>

@@ -33,7 +33,7 @@
     try {
       removeUser($_POST['user']);
     } catch (PDOException $e) {
-      $_SESSION['field_errors']['userAdminMsg'] = 'Error creating user';
+      $_SESSION['field_errors']['userAdminMsg'] = 'Error removing user';
       header('Location: ' . $_SERVER['HTTP_REFERER']);
       exit;
     }

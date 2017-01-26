@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 14:18:50
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 19:11:35
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:211755069458587d4a76b085-09432706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6456d6c9207915e5c5d06bf9c07b6a17fbeea9d4' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/list.tpl',
-      1 => 1485294206,
+      1 => 1485457207,
       2 => 'file',
     ),
   ),
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 
-	<div class="coluna" style="width: 70%;">
+	<div class="coluna" style="width: 100%;">
 			<h2 style="text-align: center;">PRODUTOS</h2>
 
 			<table class="tabelapesquisa">

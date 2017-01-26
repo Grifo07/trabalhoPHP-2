@@ -39,13 +39,13 @@ function updateCart() {
 
         for (var i = 0; i < arrayitems['item'].length; i++) {
 
-            soma = soma +parseInt(arrayitems['quantidade'][i]) * parseInt(arrayitems['preco'][i]);
+            soma = soma + parseFloat(arrayitems['quantidade'][i]) * parseFloat(arrayitems['preco'][i]);
             quant = quant + parseInt(arrayitems['quantidade'][i]);
         }
 
     }
 
-    document.getElementById("precototal").textContent=soma + " €";
+    document.getElementById("precototal").textContent=soma.toFixed(2) + " €";
     document.getElementById("ncart").textContent = quant;
 
     
@@ -98,7 +98,7 @@ function removeFromCart(id){
   var existe = isThereCookie();
 
     if(existe == 0){
-        alert("ERRO: Não existe cookie");
+        alert("Não tem mais itens no seu carrinho!");
         return;
     }
      else {
@@ -133,7 +133,7 @@ function pagamento() {
         var arritem = JSON.parse($.cookie('cart'));
 
         for (var i = 0; i < arritem['item'].length; i++) {
-            pagPreco = pagPreco +parseInt(arritem['quantidade'][i]) * parseInt(arritem['preco'][i]);
+            pagPreco = pagPreco +parseInt(arritem['quantidade'][i]) * parseFloat(arritem['preco'][i]);
             pagQuant = pagQuant + parseInt(arritem['quantidade'][i]);
         }
      
@@ -141,7 +141,7 @@ function pagamento() {
     }
 
 
-    document.getElementById("pagPreco").textContent=pagPreco;
+    document.getElementById("pagPreco").textContent=pagPreco.toFixed(2);
     document.getElementById("pagQuant").textContent=pagQuant;
 }
 
@@ -154,7 +154,7 @@ function checkout($baseurl) {
     var quantidades = "";
     var preco = 0;
     if(existe == 0){
-        alert("ERRO: Não existe cookie");
+        alert("Não tem itens no seu carrinho! Adicione itens antes de iniciar uma compra");
         return;
     }
     else {
@@ -165,17 +165,17 @@ function checkout($baseurl) {
             if(i==arritem['item'].length-1) {
                 ids = ids + arritem['item'][i];
                 quantidades = quantidades + arritem['quantidade'][i];
-                preco = preco +parseInt(arritem['quantidade'][i]) * parseInt(arritem['preco'][i]);
+                preco = preco +parseInt(arritem['quantidade'][i]) * parseFloat(arritem['preco'][i]);
             } else {
                 ids = ids + arritem['item'][i] + ",";
                 quantidades = quantidades + arritem['quantidade'][i] + ",";
-                preco = preco +parseInt(arritem['quantidade'][i]) * parseInt(arritem['preco'][i]);
+                preco = preco +parseInt(arritem['quantidade'][i]) * parseFloat(arritem['preco'][i]);
             }
         }
      
 
     }
-    link = link + ids + "&quantidades=" + quantidades + "&preco=" + preco;
+    link = link + ids + "&quantidades=" + quantidades + "&preco=" + preco.toFixed(2);
 
     $.removeCookie('cart', {path: "/", domain: "gnomo.fe.up.pt"});
 

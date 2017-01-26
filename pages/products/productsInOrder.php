@@ -3,6 +3,7 @@
   include_once($BASE_DIR .'database/products.php');
 
   $ids = explode(",", $_GET['ids']);
+  $quantidades = explode(",", $_GET['quantidades']);
 
   $products = getProductsFromCookie($ids);
 
@@ -22,8 +23,8 @@
  
 
    $smarty->assign('products', $products);
-   $smarty->assign('productsquantidades', $_GET['quantidades']);
-  $smarty->display('products/list.tpl');
+   $smarty->assign('productsquantidades', $quantidades);
+  $smarty->display('products/listInOrder.tpl');
 
 
 ?>

@@ -10,6 +10,7 @@
     <script src="{$BASE_URL}javascript/menus/showmenu.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
+    <script src="{$BASE_URL}javascript/menus/popup.js" type="text/javascript"></script>
     <link rel="stylesheet" href="{$BASE_URL}font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
   
@@ -100,11 +101,24 @@
             </li>
           </ul>
           </nav>
-
-          
-
+<font color="#D47404">.</font>
+    
 
     </header>
-   <body>
+    <body>
+
+    <div id="error_messages">
+    {foreach $ERROR_MESSAGES as $error}
+      <div class="error" style="padding: 10px 15%;margin-top: -5px;">{$error}
+      <button id="lupa" style="float: right; margin-top: -5px;" onclick="closeMsg();"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button></div>
+    {/foreach}
+    </div>
+    <div id="success_messages">
+    {foreach $SUCCESS_MESSAGES as $success}
+      <div class="success" style="padding: 10px 15%;">{$success}
+      <button id="lupa" style="float: right; margin-top: -5px;" onclick="closeMsg();"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button></div>
+    {/foreach}
+    </div>
+   
     <div class="containergeral">
  

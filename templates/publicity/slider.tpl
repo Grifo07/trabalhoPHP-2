@@ -1,12 +1,12 @@
 
 <div class="slidercontainer" >
- <a href="http://www.google.pt">  
+ <a href="">  
  <img class="mySlides" src="{$BASE_URL}images/publicity/slider/honor8.jpg" style="width:100%; height: auto;">
  </a>
-  <a href="http://www.google.pt"> 
+  <a href="{$BASE_URL}pages/products/displayproduct.php?id=68"> 
   <img class="mySlides" src="{$BASE_URL}images/publicity/slider/asus.jpg" style="width:100%; height: auto;">
   </a>
-   <a href="http://www.google.pt"> 
+   <a href="{$BASE_URL}pages/products/displayproduct.php?id=66"> 
   <img class="mySlides" src="{$BASE_URL}images/publicity/slider/titanx.jpg" style="width:100%; height: auto;">
    </a>
 </div>

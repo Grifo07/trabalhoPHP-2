@@ -21,7 +21,7 @@ while($separador[$x]){
 
 if ($x % 2 !== 0) {
 	
- 	if (strpos($separador[$x], $q) !== false){
+ 	if (stripos($separador[$x], $q) !== false){
  		$id = $separador[$x-1];
 
 
