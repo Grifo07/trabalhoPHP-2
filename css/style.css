@@ -182,7 +182,7 @@ li{
     margin: 12.5px 0px;
     height: 75px;
     width: 75px;
-    margin-left: 50px;
+    margin-left: 60px;
 
 }
 
@@ -191,7 +191,7 @@ li{
 width: 55%;
 color: red;
 padding-top: 55px;
-padding-left: 10%;
+padding-left: 6%;
 
 
 }
@@ -522,44 +522,3 @@ float: middle;
     margin-left: 35%; 
 
 }
-/*
- .holder {
-    margin:15px 0;
-}
-.holder a {
-    font-size:12px;
-    cursor:pointer;
-    margin:0 5px;
-    color:#333;
-}
-.holder a:hover {
-    background-color:#222;
-    color:#fff;
-}
-.holder a.jp-previous {
-    margin-right:15px;
-}
-.holder a.jp-next {
-    margin-left:15px;
-}
-.holder a.jp-current,a.jp-current:hover {
-    color:#FF4242;
-    font-weight:bold;
-}
-.holder a.jp-disabled,a.jp-disabled:hover {
-    color:#bbb;
-}
-.holder a.jp-current,a.jp-current:hover,.holder a.jp-disabled,a.jp-disabled:hover {
-    cursor:default;
-    background:none;
-}
-.holder span {
-    margin:0 5px;
-}
-form {
-    float:right;
-    margin-right:10px;
-}
-form label {
-    margin-right: 5px;
-}*/

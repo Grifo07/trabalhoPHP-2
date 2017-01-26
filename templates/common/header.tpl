@@ -20,9 +20,9 @@
     <header>
     <div class="linha">
       <div class="coluna">
-      <a href="{$BASE_URL}"><img id="headerLogo" src="{$BASE_URL}images/assets/headerLogo.png"></a>
-       </div>
-       <div class="coluna" id="container_botoes">
+        <a href="{$BASE_URL}"><img id="headerLogo" src="{$BASE_URL}images/assets/headerLogo.png"></a>
+      </div>
+      <div class="coluna" id="container_botoes">
        
 
 
@@ -30,18 +30,18 @@
             <ul class="parent">
               <li id="categorias">Categorias
                 <ul class="child">
-                  <li><a href="{$BASE_URL}pages/products/listProducts.php">Periféricos</a></li>
-                  <li><a href="http://www.google.pt">Monitores</a></li>
-                  <li><a href="http://www.google.pt">Torres</a></li>
-                  <li><a href="http://www.google.pt">Componentes</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=perifericos">Periféricos</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=telm">Telemóveis/Tablets</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=computadores">Computadores</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=outros">Outros</a></li>
                 </ul>
                 </li>
               <li id="destaques">Destaques
                 <ul class="child">
-                  <li><a href="http://www.google.pt">Periféricos</a></li>
-                  <li><a href="http://www.google.pt">Monitores</a></li>
-                  <li><a href="http://www.google.pt">Torres</a></li>
-                  <li><a href="http://www.google.pt">Componentes</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=perifericos&dest=1">Periféricos</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=telm&dest=1">Telemóveis/Tablets</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=computadores&dest=1">Computadores</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProductsHeader.php?cat=outros&dest=1">Outros</a></li>
                 </ul>
                 </li>
             </ul>

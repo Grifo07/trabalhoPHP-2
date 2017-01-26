@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 04:04:50
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 13:35:29
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquarePages.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:213286435058895a0ea262d5-98382432%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6ca6d26ad10b02248676f9b2148adb59efd5994b' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquarePages.tpl',
-      1 => 1485403487,
+      1 => 1485437063,
       2 => 'file',
     ),
   ),
@@ -73,31 +73,18 @@ pages/products/displayproduct.php?id=<?php echo $_smarty_tpl->tpl_vars['product'
 
                             </div>
                     <?php }?>
-                    
-                    <!-- <li> -->
-                        <!-- <img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-<?php echo $_smarty_tpl->tpl_vars['product']->value['photo'];?>
-" alt="image"> -->
-
-
-                        
-                    <!-- </li> -->
+                   
                 <?php }
 if (!$_smarty_tpl->tpl_vars['product']->_loop) {
 ?>
                     Não foram encontrados itens;    
                 <?php } ?>
 
-                <!-- </ul> -->
+              
                 <?php echo $_smarty_tpl->tpl_vars['pagination']->value;?>
 
                 
-                
-                <!-- </div>
-                <div class="linha" style="margin-right: 1%; margin-bottom: 1%">
-                <a href="#" style="float: right; color: black;">Mostrar todos >></a>
-                </div> -->
-
+              
 
         </div></center>
 </div>

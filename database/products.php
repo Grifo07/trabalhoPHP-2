@@ -78,6 +78,23 @@
 
     return $stmt->fetch()['id'];
   }
+
+  function getProductsIn($cat, $dest) {
+    global $conn;
+
+    if($dest) {
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE categoria = ? AND destaque = 'TRUE'");
+      $stmt->execute(array($cat));
+    } else {
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE categoria = ?");
+      $stmt->execute(array($cat));
+    }
+    return $stmt->fetchAll();
+  }
   
 
  ?>

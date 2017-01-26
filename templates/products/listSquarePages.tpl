@@ -27,26 +27,15 @@
 
                             </div>
                     {/if}
-                    
-                    <!-- <li> -->
-                        <!-- <img src="{$BASE_URL}{$product.photo}" alt="image"> -->
-
-
-                        
-                    <!-- </li> -->
+                   
                 {foreachelse}
                     Não foram encontrados itens;    
                 {/foreach}
 
-                <!-- </ul> -->
+              
                 {$pagination}
                 
-                
-                <!-- </div>
-                <div class="linha" style="margin-right: 1%; margin-bottom: 1%">
-                <a href="#" style="float: right; color: black;">Mostrar todos >></a>
-                </div> -->
-
+              
 
         </div></center>
 </div>

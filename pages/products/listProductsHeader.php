@@ -3,7 +3,7 @@
   include_once($BASE_DIR .'database/products.php');
   include_once($BASE_DIR .'actions/products/pagination3.php');
 
-   $products = getAllProducts();  
+   $products = getProductsIn($_GET['cat'],$_GET['dest']);  
 
     foreach ($products as $key => $product) {
 
@@ -34,7 +34,7 @@
   
   if($adjacents<=0) $adjacents = 4;
 
-  $reload = $_SERVER['PHP_SELF'] . "?tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
+  $reload = $_SERVER['PHP_SELF'] . "?cat=".$_GET['cat']."&dest=".$_GET['dest']."&tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
   $out = paginate_three($reload, $page, $tpages, $adjacents, $ppage);
 
   $smarty->assign('pag', $page);
