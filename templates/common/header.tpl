@@ -30,8 +30,8 @@
       <div class="linha">
       <script src="{$BASE_URL}javascript/search/livesearch.js" type="text/javascript"></script>
 
-        <form>
-          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
+        <form action="{$BASE_URL}pages/products/listProductsSearch.php" method="post">
+          <input type="text" id="caixapesquisa" name="caixapesquisa" value="{$FORM_VALUES.caixapesquisa}" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
           <button type="submit" id="lupa" style="margin-top: 10px;">
               <i class="fa fa-search fa-2x" aria-hidden="false" style="color: #444444;"></i>
           </button>

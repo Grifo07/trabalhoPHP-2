@@ -149,5 +149,16 @@
   }
   
 
+  function getSearch($s) {
+    global $conn;
+    $s='%'.$s.'%';
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE nome iLIKE ?;");
+      $stmt->execute(array($s));
+   
+    return $stmt->fetchAll();
+  }
+
 
  ?>

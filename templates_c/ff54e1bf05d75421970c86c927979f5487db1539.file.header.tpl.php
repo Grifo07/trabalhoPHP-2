@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 17:23:37
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 18:47:12
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:156550731958494bfdf04343-41678115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff54e1bf05d75421970c86c927979f5487db1539' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1485451415,
+      1 => 1485456406,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'BASE_URL' => 0,
+    'FORM_VALUES' => 0,
     'USERNAME' => 0,
   ),
   'has_nocache_code' => false,
@@ -65,8 +66,10 @@ images/assets/headerLogo.png"></a>
       <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/search/livesearch.js" type="text/javascript"></script>
 
-        <form>
-          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
+        <form action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/products/listProductsSearch.php" method="post">
+          <input type="text" id="caixapesquisa" name="caixapesquisa" value="<?php echo $_smarty_tpl->tpl_vars['FORM_VALUES']->value['caixapesquisa'];?>
+" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
           <button type="submit" id="lupa" style="margin-top: 10px;">
               <i class="fa fa-search fa-2x" aria-hidden="false" style="color: #444444;"></i>
           </button>

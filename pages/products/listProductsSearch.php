@@ -3,16 +3,11 @@
   include_once($BASE_DIR .'database/products.php');
   include_once($BASE_DIR .'actions/products/pagination3.php');
 
-  $ex= $_GET['ex'];
-   $products = getExtras($ex);
+  $s= $_POST['caixapesquisa'];
+  $_SESSION['form_values'] = $_POST;
+  $products = getSearch($s);
 
-   if($ex=='1') {
-      $msg='PRODUTOS EM DESTAQUE';
-    } else if($ex=='2') {
-      $msg='NOVIDADES';
-    } else if($ex=='3') {
-      $msg='PROMOÇÕES';
-    }
+  $msg='RESULTADOS DE PESQUISA PARA "'.$s.'"';
 
     foreach ($products as $key => $product) {
 
@@ -43,7 +38,7 @@
   
   if($adjacents<=0) $adjacents = 4;
 
-  $reload = $_SERVER['PHP_SELF'] . "?ex=".$_GET['cat']."&tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
+  $reload = $_SERVER['PHP_SELF'] . "?tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
   $out = paginate_three($reload, $page, $tpages, $adjacents, $ppage);
 
   $smarty->assign('msg', $msg);

@@ -8,7 +8,7 @@
 
 
         <center><div class="coluna" style="width: 70%;">
-                <h2 style="text-align: center;">TODOS OS PRODUTOS</h2>
+                <h2 style="text-align: center;">{$msg}</h2>
                 <div class="linha">
 
 

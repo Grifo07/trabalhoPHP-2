@@ -3,7 +3,28 @@
   include_once($BASE_DIR .'database/products.php');
   include_once($BASE_DIR .'actions/products/pagination3.php');
 
-   $products = getProductsIn($_GET['cat'],$_GET['dest']);  
+   $products = getProductsIn($_GET['cat'],$_GET['dest']);
+
+   $cat=$_GET['cat'];
+   $dest=$_GET['dest'];
+
+   if($cat=='perifericos' && $dest!='1') {
+      $msg='PERIFÉRICOS';
+    } else if($cat=='telm' && $dest!='1') {
+      $msg='TELEMÓVEIS/TABLETS';
+    } else if($cat=='computadores' && $dest!='1') {
+      $msg='COMPUTADORES';
+    } else if($cat=='outros' && $dest!='1') {
+      $msg='OUTROS';
+    } else if($cat=='perifericos' && $dest=='1') {
+      $msg='PERIFÉRICOS EM DESTAQUE';
+    } else if($cat=='telm' && $dest=='1') {
+      $msg='TELEMÓVEIS/TABLETS EM DESTAQUE';
+    } else if($cat=='computadores' && $dest=='1') {
+      $msg='COMPUTADORES EM DESTAQUE';
+    } else if($cat=='outros' && $dest=='1') {
+      $msg='OUTROS EM DESTAQUE';
+    }
 
     foreach ($products as $key => $product) {
 
@@ -37,6 +58,7 @@
   $reload = $_SERVER['PHP_SELF'] . "?cat=".$_GET['cat']."&dest=".$_GET['dest']."&tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
   $out = paginate_three($reload, $page, $tpages, $adjacents, $ppage);
 
+  $smarty->assign('msg', $msg);
   $smarty->assign('pag', $page);
   $smarty->assign('ppag', $ppage);
   $smarty->assign('pagination', $out);
