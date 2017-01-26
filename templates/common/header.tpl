@@ -5,6 +5,7 @@
     <meta charset='utf-8'>
 
     <link rel="stylesheet" href="{$BASE_URL}css/style.css">
+    <link rel="stylesheet" href="{$BASE_URL}css/paginate.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/menus/showmenu.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>

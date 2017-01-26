@@ -1,6 +1,7 @@
 <?php
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/products.php');
+  include_once($BASE_DIR .'actions/products/pagination3.php');
 
    $products = getAllProducts();  
 
@@ -15,9 +16,31 @@
       $products[$key]['photo'] = $photo;
      }
 
- 
+  $ppage=intval($_GET['ppage']);
+  // if($ppage!=intval($_POST['ppage'])) {
+  //   $ppage=intval($_POST['ppage']);
+  // }
+  
+  if($ppage<=0)  $ppage  = 8;
+  $pages = ceil(count($products)/$ppage);
 
-   $smarty->assign('products', $products);
+  $page   = intval($_GET['page']);
+  if(isset($_POST['ppage'])) $ppage=intval($_POST['ppage']);
+
+  $tpages = $pages; 
+  $adjacents  = intval($_GET['adjacents']);
+
+  if($page<=0)  $page  = 1;
+  
+  if($adjacents<=0) $adjacents = 4;
+
+  $reload = $_SERVER['PHP_SELF'] . "?tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
+  $out = paginate_three($reload, $page, $tpages, $adjacents, $ppage);
+
+  $smarty->assign('pag', $page);
+  $smarty->assign('ppag', $ppage);
+  $smarty->assign('pagination', $out);
+  $smarty->assign('products', $products);
   $smarty->display('products/listSquarePages.tpl');
 
 
