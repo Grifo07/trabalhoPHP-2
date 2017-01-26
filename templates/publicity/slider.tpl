@@ -1,6 +1,6 @@
 
 <div class="slidercontainer" >
- <a href="">  
+ <a href="{$BASE_URL}pages/products/displayproduct.php?id=69">  
  <img class="mySlides" src="{$BASE_URL}images/publicity/slider/honor8.jpg" style="width:100%; height: auto;">
  </a>
   <a href="{$BASE_URL}pages/products/displayproduct.php?id=68"> 
