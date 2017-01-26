@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 13:36:37
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 17:23:37
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:156550731958494bfdf04343-41678115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff54e1bf05d75421970c86c927979f5487db1539' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1485437794,
+      1 => 1485451415,
       2 => 'file',
     ),
   ),
@@ -41,8 +41,6 @@ javascript/menus/showmenu.js" type="text/javascript"></script>
 javascript/cart/jquery.cookie.js" type="text/javascript"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/cart/cart.js" type="text/javascript"></script>
-    <!-- <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-javascript/products/listPages.js" type="text/javascript"></script> -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
@@ -52,14 +50,32 @@ font-awesome-4.7.0/css/font-awesome.min.css">
   
     <header>
     <div class="linha">
+    
       <div class="coluna">
-      <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+        <a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 "><img id="headerLogo" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 images/assets/headerLogo.png"></a>
-       </div>
-       <div class="coluna" id="container_botoes">
-       
+      </div>
 
+
+
+      <div class="coluna" id="container_botoes">
+       
+      <div class="linha">
+      <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/search/livesearch.js" type="text/javascript"></script>
+
+        <form>
+          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
+          <button type="submit" id="lupa" style="margin-top: 10px;">
+              <i class="fa fa-search fa-2x" aria-hidden="false" style="color: #444444;"></i>
+          </button>
+
+          <div id="livesearch"></div>
+        </form>
+
+      </div>
+      <div class="linha">
 
          <nav id="navigation">
             <ul class="parent">
@@ -91,31 +107,37 @@ pages/products/listProductsHeader.php?cat=outros&dest=1">Outros</a></li>
          </nav>
         
 
-        <div class="coluna">
-        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-javascript/search/livesearch.js" type="text/javascript"></script>
+       <!--  <div class="coluna"> -->
+        
+        <!-- </div> -->
 
-        <form>
-          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
-          <div id="livesearch"></div>
-        </form>
         </div>
-
 
         </div>
        </div>
 
+
+
+       
+
+       
         <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
-        <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+          <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-         <?php } else { ?>
-        <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+           <?php } else { ?>
+          <?php echo $_smarty_tpl->getSubTemplate ('common/menu_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-        <?php }?>
-    
+          <?php }?>
+          
+
           <nav id="navigation">
-           <ul class="parent">
-            <li id="carrinho">Carrinho: <div id="precototal" onload="updateCart()"></div>
+           <ul class="parent" style="width: 100%;">
+            <li class="carrinho" id="carrinho">
+              <div id="carrinho2">
+              <div class="carrinho3" id="ncart" onload="updateCart()"></div>
+              <i class="fa fa-shopping-cart fa-3x" style="margin-right: 5px;" aria-hidden="true"></i><br>
+              </div>
+            <div id="precototal" onload="updateCart()"></div>
                 <ul class="child">
                   <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/cart/seeCart.php">Ver Carrinho</a></li>
@@ -125,6 +147,9 @@ pages/cart/checkout.php">Pagamento</a></li>
             </li>
           </ul>
           </nav>
+
+          
+
 
     </header>
    <body>

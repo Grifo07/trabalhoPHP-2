@@ -10,7 +10,6 @@
     <script src="{$BASE_URL}javascript/menus/showmenu.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
-    <!-- <script src="{$BASE_URL}javascript/products/listPages.js" type="text/javascript"></script> -->
     <link rel="stylesheet" href="{$BASE_URL}font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
   
@@ -19,12 +18,29 @@
   
     <header>
     <div class="linha">
+    
       <div class="coluna">
         <a href="{$BASE_URL}"><img id="headerLogo" src="{$BASE_URL}images/assets/headerLogo.png"></a>
       </div>
+
+
+
       <div class="coluna" id="container_botoes">
        
+      <div class="linha">
+      <script src="{$BASE_URL}javascript/search/livesearch.js" type="text/javascript"></script>
 
+        <form>
+          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
+          <button type="submit" id="lupa" style="margin-top: 10px;">
+              <i class="fa fa-search fa-2x" aria-hidden="false" style="color: #444444;"></i>
+          </button>
+
+          <div id="livesearch"></div>
+        </form>
+
+      </div>
+      <div class="linha">
 
          <nav id="navigation">
             <ul class="parent">
@@ -48,28 +64,35 @@
          </nav>
         
 
-        <div class="coluna">
-        <script src="{$BASE_URL}javascript/search/livesearch.js" type="text/javascript"></script>
+       <!--  <div class="coluna"> -->
+        
+        <!-- </div> -->
 
-        <form>
-          <input type="text" id="caixapesquisa" placeholder="Pesquisa" size="30" onkeyup="showResult(this.value)" />
-          <div id="livesearch"></div>
-        </form>
         </div>
-
 
         </div>
        </div>
 
+
+
+       
+
+       
         {if $USERNAME}
-        {include file='common/menu_logged_in.tpl'}
-         {else}
-        {include file='common/menu_logged_out.tpl'}
-        {/if}
-    
+          {include file='common/menu_logged_in.tpl'}
+           {else}
+          {include file='common/menu_logged_out.tpl'}
+          {/if}
+          
+
           <nav id="navigation">
-           <ul class="parent">
-            <li id="carrinho">Carrinho: <div id="precototal" onload="updateCart()"></div>
+           <ul class="parent" style="width: 100%;">
+            <li class="carrinho" id="carrinho">
+              <div id="carrinho2">
+              <div class="carrinho3" id="ncart" onload="updateCart()"></div>
+              <i class="fa fa-shopping-cart fa-3x" style="margin-right: 5px;" aria-hidden="true"></i><br>
+              </div>
+            <div id="precototal" onload="updateCart()"></div>
                 <ul class="child">
                   <li><a href="{$BASE_URL}pages/cart/seeCart.php">Ver Carrinho</a></li>
                   <li><a href="{$BASE_URL}pages/cart/checkout.php">Pagamento</a></li>
@@ -77,6 +100,9 @@
             </li>
           </ul>
           </nav>
+
+          
+
 
     </header>
    <body>

@@ -1,5 +1,5 @@
 <?php
-
+include_once('../../config/init.php');
 
 
 
@@ -29,11 +29,11 @@ if ($x % 2 !== 0) {
   		// $hint= "<form action='action_page.php?id='".$separador[$id].">";
  		if ($hint=="") {
 
-		$hint="<a href='http://www.ajsfhaidughia.pt?id=".$id."'>" . 
+		$hint="<a href='".$BASE_URL."pages/products/displayproduct.php?id=".$id."'>" . 
           $separador[$x]. "</a>";
 		}
 		else{
-			$hint=$hint . "<br /><br /><a href='http://www.ajsfhaidughia.pt?id=".$id."'>" . 
+			$hint=$hint . "<br /><br /><a href='".$BASE_URL."pages/products/displayproduct.php?id=".$id."'>" . 
           $separador[$x]. "</a>";
 
 		}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-18 03:04:52
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 14:18:52
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/checkout.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1287200924587eb9df3fe3f2-72232410%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8662cc0f07785ae8d20e7fa9980e52c6e634c630' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/checkout.tpl',
-      1 => 1484708282,
+      1 => 1485275951,
       2 => 'file',
     ),
   ),
@@ -81,7 +81,8 @@ images/assets/pay.png" id="pay" style="width: 90%; height: auto;"></img>
 				  </tr>
 				 
 				  <tr>
-				    <td width="100%" colspan="2"><button type = "submit" id="botaopagar" onclick="checkout()" style="float: right; margin-top: 2px;">Efetuar Pagamento</button></td>
+				    <td width="100%" colspan="2"><button type = "submit" id="botaopagar" onclick='checkout("<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+")' style="float: right; margin-top: 2px;">Efetuar Pagamento</button></td>
 				  </tr>
 							  
 				</table>

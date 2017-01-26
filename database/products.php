@@ -95,6 +95,59 @@
     }
     return $stmt->fetchAll();
   }
+
+  function getDestaques() {
+    global $conn;
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE destaque = 'TRUE'");
+      $stmt->execute();
+   
+    return $stmt->fetchAll();
+  }
+
+  function getNovidades() {
+    global $conn;
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE novidade = 'TRUE'");
+      $stmt->execute();
+   
+    return $stmt->fetchAll();
+  }
+
+  function getPromocoes() {
+    global $conn;
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE promocao = 'TRUE'");
+      $stmt->execute();
+   
+    return $stmt->fetchAll();
+  }
+
+  function getExtras($ex) {
+    global $conn;
+
+    if($ex=='1') {
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE destaque = 'TRUE'");
+      $stmt->execute();
+    } else if($ex=='2') {
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE novidade = 'TRUE'");
+      $stmt->execute();
+    } else if($ex=='3') {
+      $stmt = $conn->prepare("SELECT *
+                              FROM produtos
+                              WHERE promocao = 'TRUE'");
+      $stmt->execute();
+    }
+    return $stmt->fetchAll();
+  }
   
+
 
  ?>

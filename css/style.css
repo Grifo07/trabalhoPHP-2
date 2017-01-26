@@ -116,7 +116,7 @@ box-sizing: border-box;
 
 ul.parent > li {
     float: left;
-    width: 20%;
+    width: 40%;
     text-align: center;
     padding: 10px;
     color: white;
@@ -148,31 +148,56 @@ li{
 }
 
 #username{
-   margin-top: 55px;
-    width: 10%;
-}
 
-#carrinho{
-   
-   margin-top: 55px;
+   margin-top: -25px;
     width: 10%;
     display: inline-block;
     z-index: 2;
+    float: right;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: #444444;
+
+}
+
+#carrinho{
+   margin-top: -25px;
+    width: 10%;
+    display: inline-block;
+    z-index: 2;
+    float: right;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: #444444;
 }
 
 
 
 #caixapesquisa{
-    margin-left: 50%;
+    margin-left: 0%;
     height: 20px;
-    margin-top: 5px;
-    width: 100%;
+    margin-top: 0px;
+    width: 80%;
+    margin-bottom: 11px;
 }
 
 #livesearch{
-    margin-left: 50%;
-    width: 100%;
+    margin-left: 0;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    width: 400px;
     color: black;
+    z-index: 10;
+    position: absolute;
+
    
 }
 
@@ -188,17 +213,28 @@ li{
 
 #container_botoes{
 
-width: 55%;
+width: 26%;
 color: red;
-padding-top: 55px;
+padding-top: 2px;
 padding-left: 6%;
 
 
 }
 
+.headerRight {
+  float: right;
+  width: 50%
+  /*margin-right: 215px;
+  padding-right: 215px;*/
+  margin-right: 16%;
+  padding-right: 16%;
+}
+
 #container_caixas{
 
 padding: 0 0 0 0%;
+float: right;
+margin-right: 15%
 
 
 }
@@ -472,6 +508,7 @@ float: middle;
     margin: 0;
     padding: 0;
     display: inline-block;
+    margin-top: -20px;
 }
 
 #pagQuant {
@@ -521,4 +558,25 @@ float: middle;
     height: auto;
     margin-left: 35%; 
 
+}
+
+#lupa {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+#carrinho2 #ncart {
+  position: relative;
+  /*bottom:43px;*/
+  top: 37px;
+  left: 3px;
+  color: black;
+  padding: 0;
+  margin: 0;
+  color: #ADACAC;
 }

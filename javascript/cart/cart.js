@@ -30,6 +30,7 @@ function updateCart() {
 
     var existecookie = isThereCookie();
     var soma=0;
+    var quant=0;
     if(existecookie == 1){
          var arrayitems = {};           
             var arrayitems = JSON.parse($.cookie('cart'));
@@ -39,11 +40,13 @@ function updateCart() {
         for (var i = 0; i < arrayitems['item'].length; i++) {
 
             soma = soma +parseInt(arrayitems['quantidade'][i]) * parseInt(arrayitems['preco'][i]);
+            quant = quant + parseInt(arrayitems['quantidade'][i]);
         }
 
     }
 
     document.getElementById("precototal").textContent=soma + " €";
+    document.getElementById("ncart").textContent = quant;
 
     
 }
