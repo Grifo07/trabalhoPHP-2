@@ -3,7 +3,7 @@
 {include file='publicity/slider.tpl'}
 
 {if $datachange == FALSE}
-<div class="coluna" style="width: 70%;">
+<div class="coluna" style="width: 100%;">
   <h2 style="text-align: center;">REGISTAR</h2>
   
   <form action="{$BASE_URL}actions/users/register.php" method="post" enctype="multipart/form-data">
@@ -92,7 +92,7 @@
 
 
 
-<div class="coluna" style="width: 70%;">
+<div class="coluna" style="width: 100%;">
   <h2 style="text-align: center;">ALTERAR DADOS</h2>
   
   <form action="{$BASE_URL}actions/users/updateUser.php" method="post" enctype="multipart/form-data">

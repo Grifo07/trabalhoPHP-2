@@ -2,7 +2,7 @@
 
 {include file='publicity/slider.tpl'}
 
-<div class="coluna" style="width: 70%;">
+<div class="coluna" style="width: 100%;">
   <h2 style="text-align: center;">REGISTAR</h2>
   
 <form action="{$BASE_URL}pages/users/changeData.php" method="post" enctype="multipart/form-data">

@@ -10,7 +10,7 @@
 
 
 
-	<div class="coluna" style="width: 70%;">
+	<div class="coluna" style="width: 100%;">
 			<h2 style="text-align: center;">PRODUTOS</h2>
 
 			<table class="tabelapesquisa">

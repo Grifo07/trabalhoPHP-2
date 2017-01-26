@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 01:30:35
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 19:02:03
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/users/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11209203515889499a9d0738-60149949%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '51d36b0ade1a52dc372eb439fcc979f654a3ce3f' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/users/admin.tpl',
-      1 => 1485394228,
+      1 => 1485457320,
       2 => 'file',
     ),
   ),
@@ -29,10 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_5889499aab5a95_04389463')) {function content_5889499aab5a95_04389463($_smarty_tpl) {?>	<?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-	<?php echo $_smarty_tpl->getSubTemplate ('publicity/sidepub.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-	<?php echo $_smarty_tpl->getSubTemplate ('publicity/sidepubright.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
+	
 
 
 
@@ -42,7 +39,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">Alterar definições de utilizador</h2>
 				<div class="linha">
 				<form action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
@@ -71,7 +68,7 @@ actions/users/admremUser.php" method="post" enctype="multipart/form-data">
 		</div></center>
 
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">Adicionar produto</h2>
 				<div class="linha">
 					<form id="addProd" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

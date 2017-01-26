@@ -6,7 +6,7 @@
 
 	{foreach $indproduct as $indprod}
 
-		<div class="coluna" style="width: 70%;">
+		<div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">{$indprod.nome}</h2>
 
 

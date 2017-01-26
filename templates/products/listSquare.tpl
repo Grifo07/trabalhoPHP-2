@@ -10,7 +10,7 @@
 
 
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">DESTAQUE</h2>
 				<div class="linha">
 				
@@ -47,7 +47,7 @@
 
 		</div></center>
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">NOVIDADES</h2>
 				<div class="linha">
 				{foreach from=$novidades key=i item=novidade name=foo}
@@ -78,7 +78,7 @@
 
 		</div></center>
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">PROMOÇÕES</h2>
 				<div class="linha">
 				{foreach from=$promocoes key=i item=promocao name=foo}
@@ -109,6 +109,7 @@
 
 		</div></center>
 	</div>
+	
 
 	{include file='common/footer.tpl'}
 	 

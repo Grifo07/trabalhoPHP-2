@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 18:04:54
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 19:07:07
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12284132435876d80b51b618-26269655%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf60b7d1eb1d752e1375a4013b7ce743ac1294f6' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/listSquare.tpl',
-      1 => 1485453883,
+      1 => 1485457607,
       2 => 'file',
     ),
   ),
@@ -46,7 +46,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">DESTAQUE</h2>
 				<div class="linha">
 				
@@ -111,7 +111,7 @@ pages/products/listProducts.php?ex=1" style="float: right; color: black;">Mostra
 
 		</div></center>
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">NOVIDADES</h2>
 				<div class="linha">
 				<?php  $_smarty_tpl->tpl_vars['novidade'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['novidade']->_loop = false;
@@ -159,7 +159,7 @@ pages/products/listProducts.php?ex=2" style="float: right; color: black;">Mostra
 
 		</div></center>
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">PROMOÇÕES</h2>
 				<div class="linha">
 				<?php  $_smarty_tpl->tpl_vars['promocao'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['promocao']->_loop = false;
@@ -207,6 +207,7 @@ pages/products/listProducts.php?ex=3" style="float: right; color: black;">Mostra
 
 		</div></center>
 	</div>
+	
 
 	<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

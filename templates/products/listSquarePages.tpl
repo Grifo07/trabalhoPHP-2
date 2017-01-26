@@ -7,7 +7,7 @@
 
 
 
-        <center><div class="coluna" style="width: 70%;">
+        <center><div class="coluna" style="width: 100%;">
                 <h2 style="text-align: center;">{$msg}</h2>
                 <div class="linha">
 

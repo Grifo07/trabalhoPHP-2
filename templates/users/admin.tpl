@@ -1,7 +1,6 @@
 	{include file='common/header.tpl'}
 
-	{include file='publicity/sidepub.tpl'}
-	{include file='publicity/sidepubright.tpl'}
+	
 
 
 
@@ -11,7 +10,7 @@
 
 
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">Alterar definições de utilizador</h2>
 				<div class="linha">
 				<form action="{$BASE_URL}actions/users/admremUser.php" method="post" enctype="multipart/form-data">
@@ -37,7 +36,7 @@
 		</div></center>
 
 
-		<center><div class="coluna" style="width: 70%;">
+		<center><div class="coluna" style="width: 100%;">
 				<h2 style="text-align: center;">Adicionar produto</h2>
 				<div class="linha">
 					<form id="addProd" action="{$BASE_URL}actions/products/addProduct.php" method="post" enctype="multipart/form-data">
