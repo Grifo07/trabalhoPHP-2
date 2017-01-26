@@ -325,7 +325,6 @@ float: middle;
 }
 
 
-
 .products a {
     color: grey;
     background: black;
@@ -427,6 +426,48 @@ float: middle;
   right: 0;
 }
 
+.botaoremover {
+  border-radius: 4px;
+  background-color: red;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 90%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  z-index: 2;
+  position: relative;
+}
+
+.botaoremover span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.botaoremover span:after {
+  content: 'Remover(Admin)';
+  font-size: 85%;
+  position: absolute;
+  opacity: 0;
+  top: 3px;
+  right: 20px;
+  transition: 0.5s;
+}
+
+.botaoremover:hover span {
+  padding-right: 210px;
+}
+
+.botaoremover:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 #precototal {
     margin: 0;
     padding: 0;
@@ -481,3 +522,44 @@ float: middle;
     margin-left: 35%; 
 
 }
+/*
+ .holder {
+    margin:15px 0;
+}
+.holder a {
+    font-size:12px;
+    cursor:pointer;
+    margin:0 5px;
+    color:#333;
+}
+.holder a:hover {
+    background-color:#222;
+    color:#fff;
+}
+.holder a.jp-previous {
+    margin-right:15px;
+}
+.holder a.jp-next {
+    margin-left:15px;
+}
+.holder a.jp-current,a.jp-current:hover {
+    color:#FF4242;
+    font-weight:bold;
+}
+.holder a.jp-disabled,a.jp-disabled:hover {
+    color:#bbb;
+}
+.holder a.jp-current,a.jp-current:hover,.holder a.jp-disabled,a.jp-disabled:hover {
+    cursor:default;
+    background:none;
+}
+.holder span {
+    margin:0 5px;
+}
+form {
+    float:right;
+    margin-right:10px;
+}
+form label {
+    margin-right: 5px;
+}*/

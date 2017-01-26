@@ -17,8 +17,7 @@
           </tr>
           <tr>
             <td width="25%" id="temcaixa">
-              <input type="text" id="caixaregmaior" name="realname" value="{$FORM_VALUES.realname}"> 
-              <span class="field_error" style="color: red;">{$FIELD_ERRORS.username}</span>
+              <input type="text" id="caixaregmaior" name="realname" value="{$FORM_VALUES.realname}">
             </td>
             <td width="25%" id="temcaixa">
               <input type = "text" id="caixaregmaior" name = "regemail" value="{$FORM_VALUES.regemail}"></input>
@@ -37,6 +36,7 @@
           <tr>
             <td width="25%" id="temcaixa">
               <input type="text" id="caixareg" name="username" value="{$FORM_VALUES.username}">
+              <span class="field_error" style="color: red;">{$FIELD_ERRORS.username}</span>
             </td>
             <td width="25%" id="temcaixa">
               <input type = "text" id="caixareg" name = "regtelemovel" value="{$FORM_VALUES.regtelemovel}"></input>
@@ -107,10 +107,9 @@
           <tr>
             <td width="25%" id="temcaixa">
               <input type="text" id="caixaregmaior" name="realname" value="{$FORM_VALUES.realname}"> 
-              <span class="field_error" style="color: red;">{$FIELD_ERRORS.username}</span>
             </td>
             <td width="25%" id="temcaixa">
-              <input type = "text" id="caixaregmaior" name = "regemail" value="{$users.pemail}"></input>
+              <input type = "text" id="caixaregmaior" name = "regemail" value="{$FORM_VALUES.regemail}"></input>
               <span class="field_error" style="color: red;">{$FIELD_ERRORS.email}</span>
             </td>
             <td width="50%" id="temcaixa" colspan="2">
@@ -125,10 +124,10 @@
           </tr>
           <tr>
             <td width="25%" id="temcaixa">
-              {$users.pusername}<input type="hidden" name="username" value="{$users.pusername}">
+              {$FORM_VALUES.username}<input type="hidden" name="username" value="{$FORM_VALUES.username}">
             </td>
             <td width="25%" id="temcaixa">
-              <input type = "text" id="caixareg" name = "regtelemovel" value="{$users.ptelemovel}"></input>
+              <input type = "text" id="caixareg" name = "regtelemovel" value="{$FORM_VALUES.regtelemovel}"></input>
             </td>
             <td width="25%" id="temcaixa">
               <input type="password" id="caixareg" name="password" value="">
@@ -145,13 +144,13 @@
           </tr>
           <tr>
             <td width="50%" id="temcaixa"  colspan="2">
-              <input type = "text" id="caixaregmaior" name = "regendereco1" value="{$users.pendereco1}"></input>
+              <input type = "text" id="caixaregmaior" name = "regendereco1" value="{$FORM_VALUES.regendereco1}"></input>
             </td>
             <td width="25%" id="temcaixa">
-              <input type = "text" id="caixareg" name = "regcodpostal" value="{$users.pcodpostal}"></input>
+              <input type = "text" id="caixareg" name = "regcodpostal" value="{$FORM_VALUES.regcodpostal}"></input>
             </td>
             <td width="25%" id="temcaixa">
-              <input type = "text" id="caixareg" name = "regcidade" value="{$users.pcidade}"></input>
+              <input type = "text" id="caixareg" name = "regcidade" value="{$FORM_VALUES.regcidade}"></input>
             </td>
           </tr>
           <tr>
@@ -159,17 +158,17 @@
           </tr>
           <tr>
             <td width="50%" id="temcaixa"  colspan="2">
-              <input type = "text" id="caixaregmaior" name = "regendereco2" value="{$users.pendereco2}"></input>
+              <input type = "text" id="caixaregmaior" name = "regendereco2" value="{$FORM_VALUES.regendereco2}"></input>
             </td>
             <td width="25%" id="temcaixa">
-              <input type = "text" id="caixareg" name = "regregiao" value="{$users.pregiao}"></input>
+              <input type = "text" id="caixareg" name = "regregiao" value="{$FORM_VALUES.regregiao}"></input>
             </td>
             <td width="25%" id="temcaixa">
-              <input type = "text" id="caixareg" name = "regpais" value="{$users.ppais}"></input>
+              <input type = "text" id="caixareg" name = "regpais" value="{$FORM_VALUES.regpais}"></input>
             </td>
           </tr>
           <tr>
-            <td width="50%"  colspan="2"><span class="error"><?php echo $MsgErro;?></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Registar</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
+            <td width="50%"  colspan="2"><span class="error"><?php echo $MsgErro;?></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Actualizar Dados</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
           </tr>
                 
         </table>

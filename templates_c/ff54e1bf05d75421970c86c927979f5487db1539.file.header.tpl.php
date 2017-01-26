@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-20 03:25:03
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 02:31:25
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:156550731958494bfdf04343-41678115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ff54e1bf05d75421970c86c927979f5487db1539' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/header.tpl',
-      1 => 1484882670,
+      1 => 1485397869,
       2 => 'file',
     ),
   ),
@@ -39,6 +39,8 @@ javascript/menus/showmenu.js" type="text/javascript"></script>
 javascript/cart/jquery.cookie.js" type="text/javascript"></script>
     <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/cart/cart.js" type="text/javascript"></script>
+    <!-- <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/products/listPages.js" type="text/javascript"></script> -->
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
@@ -61,7 +63,8 @@ images/assets/headerLogo.png"></a>
             <ul class="parent">
               <li id="categorias">Categorias
                 <ul class="child">
-                  <li><a href="http://www.google.pt">Periféricos</a></li>
+                  <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/products/listProducts.php">Periféricos</a></li>
                   <li><a href="http://www.google.pt">Monitores</a></li>
                   <li><a href="http://www.google.pt">Torres</a></li>
                   <li><a href="http://www.google.pt">Componentes</a></li>
@@ -107,7 +110,8 @@ javascript/search/livesearch.js" type="text/javascript"></script>
                 <ul class="child">
                   <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/cart/seeCart.php">Ver Carrinho</a></li>
-                  <li><a href="http://www.google.pt">Pagamento</a></li>
+                  <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/cart/checkout.php">Pagamento</a></li>
                 </ul>
             </li>
           </ul>

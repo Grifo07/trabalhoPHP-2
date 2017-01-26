@@ -9,6 +9,7 @@
     <script src="{$BASE_URL}javascript/menus/showmenu.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/jquery.cookie.js" type="text/javascript"></script>
     <script src="{$BASE_URL}javascript/cart/cart.js" type="text/javascript"></script>
+    <!-- <script src="{$BASE_URL}javascript/products/listPages.js" type="text/javascript"></script> -->
     <link rel="stylesheet" href="{$BASE_URL}font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
   
@@ -28,7 +29,7 @@
             <ul class="parent">
               <li id="categorias">Categorias
                 <ul class="child">
-                  <li><a href="http://www.google.pt">Periféricos</a></li>
+                  <li><a href="{$BASE_URL}pages/products/listProducts.php">Periféricos</a></li>
                   <li><a href="http://www.google.pt">Monitores</a></li>
                   <li><a href="http://www.google.pt">Torres</a></li>
                   <li><a href="http://www.google.pt">Componentes</a></li>

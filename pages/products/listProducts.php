@@ -1,12 +1,10 @@
 <?php
-
   include_once('../../config/init.php');
   include_once($BASE_DIR .'database/products.php');
 
-   $indproduct = getProductById($_GET["id"]);  
-   
+   $products = getAllProducts();  
 
-    foreach ($indproduct as $key => $product) {
+    foreach ($products as $key => $product) {
 
       unset($photo);
       if (file_exists($BASE_DIR.'images/products/'.$product['id'].'.png'))
@@ -14,10 +12,14 @@
       if (file_exists($BASE_DIR.'images/products/'.$product['id'].'.jpg'))
         $photo = 'images/products/'.$product['id'].'.jpg';
       if (!$photo) $photo = 'images/assets/default.png';
-      $indproduct[$key]['photo'] = $photo;
-    }
+      $products[$key]['photo'] = $photo;
+     }
+
+ 
+
+   $smarty->assign('products', $products);
+  $smarty->display('products/listSquarePages.tpl');
 
 
-   $smarty->assign('indproduct', $indproduct);
-  $smarty->display('products/displayproduct.tpl');
 ?>
+

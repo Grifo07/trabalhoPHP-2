@@ -81,16 +81,17 @@
             <td width="50%"  colspan="2"><span class="error"><?php echo $MsgErro;?></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Alterar dados</button></td>
           </tr>
         </table>
-        <input type="hidden" name="pusername" value="{$user.username}">
-        <input type="hidden" name="prealname" value="{$user.realname}">
-        <input type="hidden" name="pemail" value="{$user.email}">
-        <input type="hidden" name="pcidade" value="{$user.cidade}">
-        <input type="hidden" name="pregiao" value="{$user.regiao}">
-        <input type="hidden" name="ppais" value="{$user.pais}">
-        <input type="hidden" name="pendereco1" value="{$user.endereco1}">
-        <input type="hidden" name="pendereco2" value="{$user.endereco2}">
-        <input type="hidden" name="pcodpostal" value="{$user.codpostal}">
-        <input type="hidden" name="ptelemovel" value="{$user.telemovel}">
+        <input type="hidden" name="username" value="{$user.username}">
+        <input type="hidden" name="realname" value="{$user.realname}">
+        <input type="hidden" name="regemail" value="{$user.email}">
+        <input type="hidden" name="regcidade" value="{$user.cidade}">
+        <input type="hidden" name="regregiao" value="{$user.regiao}">
+        <input type="hidden" name="regpais" value="{$user.pais}">
+        <input type="hidden" name="regendereco1" value="{$user.endereco1}">
+        <input type="hidden" name="regendereco2" value="{$user.endereco2}">
+        <input type="hidden" name="regcodpostal" value="{$user.codpostal}">
+        <input type="hidden" name="regtelemovel" value="{$user.telemovel}">
+        <input type="hidden" name="profile" value="1">
   {/foreach}
 </form>
 

@@ -3,7 +3,7 @@ $myFile = $BASE_DIR .'listaprodutos.txt';
 $fh = fopen($myFile, 'w') or die("can't open file");
 
 
-include($BASE_DIR .'database/products.php');
+
 
 $result = getAllProductsSearch();	
 

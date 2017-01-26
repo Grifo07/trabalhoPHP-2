@@ -19,11 +19,16 @@
 
 							{if $indprod.qtstock gt 0}
 								<font color="green"><h4><center>Em stock</center></h4><br></font>
+								<center><button onclick="addToCart({$product.id},{$product.preco});" class="botaocompra" style="width: 55%"><span><i class="fa fa-cart-plus fa-lg"></i></span></button></center><br><br>
 							{else}
 								<font color="red"><h4><center>Producto esgotado</center></h4><br></font>
 							{/if}
 
-							<center><button onclick="addToCart({$product.id},{$product.preco});" class="botaocompra" style="width: 55%"><span><i class="fa fa-cart-plus fa-lg"></i></span></button></center><br><br>
+							
+							{if $ADMIN}
+							<center><a href="{$BASE_URL}actions/products/removeProduct.php?id={$indprod.id}"><button class="botaoremover" style="width: 80%"><span><i class="fa fa-trash" aria-hidden="true"></i>
+</span></button></a></center><br><br>
+							{/if}
 
 						</div>
 					</div>
@@ -31,7 +36,7 @@
 						<p><hr size="450%" width="1" align="center"></p>
 					</div>
 					<div class="coluna" style="width:54%">
-						<p><?php echo nl2br {$indprod.descricao} ?></p>
+						<p>{$indprod.descricao}</p>
 					</div>
 
 		</div>

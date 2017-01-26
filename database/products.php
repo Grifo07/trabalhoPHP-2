@@ -55,16 +55,29 @@
    return $stmt->fetchAll();
  }
  
- // function getProducts($ids) {
- //    global $conn;
- //    $stmt = $conn->prepare("SELECT *
- //                            FROM produtos
- //                            WHERE id IN ( ? )");
- //    $stmt->execute(array($ids));
- //    return $stmt->fetchAll();
+ function removeProduct($id) {
+    global $conn;
+    $stmt = $conn->prepare("DELETE FROM produtos WHERE id=?");
+    $stmt->execute(array($id));
+  }
 
- // }
+  function addProduct($name, $brand, $price, $stock, $categoria, $destaques, $novidades, $promocoes, $description) {
 
+    global $conn;
+    $stmt = $conn->prepare("INSERT INTO produtos (nome, descricao, preco, qtstock, marca, destaque, novidade, promocao, categoria) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    $stmt->execute(array($name, $description, $price, $stock, $brand, $destaques, $novidades, $promocoes, $categoria));
+  }
+
+  function getIdByName($name) {
+    global $conn;
+    $stmt = $conn->prepare("SELECT id
+                            FROM produtos
+                            WHERE nome = ?");
+    $stmt->execute(array($name));
+
+    return $stmt->fetch()['id'];
+  }
   
 
  ?>

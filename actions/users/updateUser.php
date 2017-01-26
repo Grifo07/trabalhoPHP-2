@@ -43,7 +43,7 @@
   $extension = end(explode(".", $photo["name"]));
 
   try {
-   createUser($realname, $username, $password, $email, $telemovel, $_POST['regendereco1'], $_POST['regendereco2'], $_POST['regcodpostal'], $_POST['regcidade'], $_POST['regregiao'], $_POST['regpais']);
+   updateUser($realname, $username, $password, $email, $telemovel, $_POST['regendereco1'], $_POST['regendereco2'], $_POST['regcodpostal'], $_POST['regcidade'], $_POST['regregiao'], $_POST['regpais']);
     move_uploaded_file($photo["tmp_name"], $BASE_DIR . "images/users/" . $username . '.' . $extension); // this is dangerous
     chmod($BASE_DIR . "images/users/" . $username . '.' . $extension, 0644);
   } catch (PDOException $e) {

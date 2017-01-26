@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-16 23:14:50
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 00:57:59
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/menu_logged_in.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:151026133258495e579a7ce2-70859211%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '04360089400cccc4be8297d1847a9a0f121c28f2' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/menu_logged_in.tpl',
-      1 => 1484315706,
+      1 => 1485296228,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'BASE_URL' => 0,
     'USERNAME' => 0,
+    'ADMIN' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -33,8 +34,14 @@ actions/users/logout.php">Logout</a>
               <li id="username"><?php echo $_smarty_tpl->tpl_vars['USERNAME']->value;?>
 
                 <ul class="child">
-                  <li><a href="http://www.google.pt">Perfil</a></li>
-                  <li><a href="http://www.google.pt">Encomendas</a></li>
+                  <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/users/showProfile.php">Perfil</a></li>
+                  <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/orders/showOrders.php">Encomendas</a></li>
+                  <?php if ($_smarty_tpl->tpl_vars['ADMIN']->value) {?>
+                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/users/adminSettings.php">Definições Administrador</a></li>
+                  <?php }?>
                   <li><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 actions/users/logout.php">Logout</a></li>
                 </ul>

@@ -15,6 +15,7 @@
   if (isLoginCorrect($username, $password)) {
     $_SESSION['username'] = $username;
     $_SESSION['success_messages'][] = 'Login successful';
+    $_SESSION['admin'] = checkAdmin($username);
   } else {
     $_SESSION['error_messages'][] = 'Login failed';
   }

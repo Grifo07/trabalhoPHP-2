@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-17 03:59:12
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 00:58:39
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/displayproduct.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:825698039587d73d702a440-53503380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b6cb7321cef118ce9233a9156891d21fe064eab3' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/products/displayproduct.tpl',
-      1 => 1484624510,
+      1 => 1485307025,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'indprod' => 0,
     'BASE_URL' => 0,
     'product' => 0,
+    'ADMIN' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -57,13 +58,20 @@ $_smarty_tpl->tpl_vars['indprod']->_loop = true;
 
 							<?php if ($_smarty_tpl->tpl_vars['indprod']->value['qtstock']>0) {?>
 								<font color="green"><h4><center>Em stock</center></h4><br></font>
+								<center><button onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
+,<?php echo $_smarty_tpl->tpl_vars['product']->value['preco'];?>
+);" class="botaocompra" style="width: 55%"><span><i class="fa fa-cart-plus fa-lg"></i></span></button></center><br><br>
 							<?php } else { ?>
 								<font color="red"><h4><center>Producto esgotado</center></h4><br></font>
 							<?php }?>
 
-							<center><button onclick="addToCart(<?php echo $_smarty_tpl->tpl_vars['product']->value['id'];?>
-,<?php echo $_smarty_tpl->tpl_vars['product']->value['preco'];?>
-);" class="botaocompra" style="width: 55%"><span><i class="fa fa-cart-plus fa-lg"></i></span></button></center><br><br>
+							
+							<?php if ($_smarty_tpl->tpl_vars['ADMIN']->value) {?>
+							<center><a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/products/removeProduct.php?id=<?php echo $_smarty_tpl->tpl_vars['indprod']->value['id'];?>
+"><button class="botaoremover" style="width: 80%"><span><i class="fa fa-trash" aria-hidden="true"></i>
+</span></button></a></center><br><br>
+							<?php }?>
 
 						</div>
 					</div>
@@ -71,8 +79,8 @@ $_smarty_tpl->tpl_vars['indprod']->_loop = true;
 						<p><hr size="450%" width="1" align="center"></p>
 					</div>
 					<div class="coluna" style="width:54%">
-						<p><<?php ?>?php echo nl2br <?php echo $_smarty_tpl->tpl_vars['indprod']->value['descricao'];?>
- ?<?php ?>></p>
+						<p><?php echo $_smarty_tpl->tpl_vars['indprod']->value['descricao'];?>
+</p>
 					</div>
 
 		</div>
