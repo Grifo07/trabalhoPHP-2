@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 19:08:16
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-27 00:04:07
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/users/register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2102704598584954b44b25a2-60259431%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5db7112f7fad52dfaa3096020a802af5f066a2eb' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/users/register.tpl',
-      1 => 1485457283,
+      1 => 1485475445,
       2 => 'file',
     ),
   ),
@@ -124,7 +124,7 @@ actions/users/register.php" method="post" enctype="multipart/form-data">
             </td>
           </tr>
           <tr>
-            <td width="50%"  colspan="2"><span class="error"><<?php ?>?php echo $MsgErro;?<?php ?>></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Registar</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
+            <td width="50%"  colspan="2"><span class="error2"><<?php ?>?php echo $MsgErro;?<?php ?>></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Registar</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
           </tr>
                 
         </table>
@@ -226,7 +226,7 @@ actions/users/updateUser.php" method="post" enctype="multipart/form-data">
             </td>
           </tr>
           <tr>
-            <td width="50%"  colspan="2"><span class="error"><<?php ?>?php echo $MsgErro;?<?php ?>></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Actualizar Dados</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
+            <td width="50%"  colspan="2"><span class="error2"><<?php ?>?php echo $MsgErro;?<?php ?>></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Actualizar Dados</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
           </tr>
                 
         </table>

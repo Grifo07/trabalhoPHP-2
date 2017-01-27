@@ -80,7 +80,7 @@
             </td>
           </tr>
           <tr>
-            <td width="50%"  colspan="2"><span class="error"><?php echo $MsgErro;?></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Registar</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
+            <td width="50%"  colspan="2"><span class="error2"><?php echo $MsgErro;?></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Registar</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
           </tr>
                 
         </table>
@@ -168,7 +168,7 @@
             </td>
           </tr>
           <tr>
-            <td width="50%"  colspan="2"><span class="error"><?php echo $MsgErro;?></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Actualizar Dados</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
+            <td width="50%"  colspan="2"><span class="error2"><?php echo $MsgErro;?></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Actualizar Dados</button><button type = "reset" name="cmdreset" value="">Limpar Dados</button></td>
           </tr>
                 
         </table>
