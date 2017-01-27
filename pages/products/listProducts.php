@@ -43,7 +43,7 @@
   
   if($adjacents<=0) $adjacents = 4;
 
-  $reload = $_SERVER['PHP_SELF'] . "?ex=".$_GET['cat']."&tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
+  $reload = $_SERVER['PHP_SELF'] . "?ex=".$_GET['ex']."&tpages=" . $tpages . "&amp;adjacents=" . $adjacents . "&ppage=" . $ppage;
   $out = paginate_three($reload, $page, $tpages, $adjacents, $ppage);
 
   $smarty->assign('msg', $msg);
