@@ -19,7 +19,7 @@
 
 							{if $indprod.qtstock gt 0}
 								<font color="green"><h4><center>Em stock</center></h4><br></font>
-								<center><button onclick="addToCart({$product.id},{$product.preco});" class="botaocompra" style="width: 55%"><span><i class="fa fa-cart-plus fa-lg"></i></span></button></center><br><br>
+								<center><button onclick="addToCart({$indprod.id},{$indprod.preco});" class="botaocompra" style="width: 55%"><span><i class="fa fa-cart-plus fa-lg"></i></span></button></center><br><br>
 							{else}
 								<font color="red"><h4><center>Producto esgotado</center></h4><br></font>
 							{/if}

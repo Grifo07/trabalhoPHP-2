@@ -100,7 +100,8 @@
     global $conn;
       $stmt = $conn->prepare("SELECT *
                               FROM produtos
-                              WHERE destaque = 'TRUE'");
+                              WHERE destaque = 'TRUE'
+                              ORDER BY RANDOM()");
       $stmt->execute();
    
     return $stmt->fetchAll();
@@ -110,7 +111,8 @@
     global $conn;
       $stmt = $conn->prepare("SELECT *
                               FROM produtos
-                              WHERE novidade = 'TRUE'");
+                              WHERE novidade = 'TRUE'
+                              ORDER BY RANDOM()");
       $stmt->execute();
    
     return $stmt->fetchAll();
@@ -120,7 +122,8 @@
     global $conn;
       $stmt = $conn->prepare("SELECT *
                               FROM produtos
-                              WHERE promocao = 'TRUE'");
+                              WHERE promocao = 'TRUE'
+                              ORDER BY RANDOM()");
       $stmt->execute();
    
     return $stmt->fetchAll();

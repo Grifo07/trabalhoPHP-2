@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 21:34:46
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-27 14:07:10
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/users/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:82779775358894b018829b5-64463738%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c64931db441d7ff533053ff9918419e52dedfadc' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/users/profile.tpl',
-      1 => 1485457281,
+      1 => 1485526026,
       2 => 'file',
     ),
   ),
@@ -128,7 +128,7 @@ $_smarty_tpl->tpl_vars['user']->_loop = true;
             </td>
           </tr>
           <tr>
-            <td width="50%"  colspan="2"><span class="error"><<?php ?>?php echo $MsgErro;?<?php ?>></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Alterar dados</button></td>
+            <td width="50%"  colspan="2"><span class="error2"><<?php ?>?php echo $MsgErro;?<?php ?>></span></td><td width="25%"></td><td width="25%"><button type = "submit" name="cmdsubmit" value="">Alterar dados</button></td>
           </tr>
         </table>
         <input type="hidden" name="username" value="<?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>

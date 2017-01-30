@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2017-01-26 21:27:14
+<?php /* Smarty version Smarty-3.1.15, created on 2017-01-30 00:28:05
          compiled from "/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/sobrenos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1197585685588a5f68daf699-87131996%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9988a19ee98d1a53e7815d4e723802ea4b9de070' => 
     array (
       0 => '/usr/users2/mieec2012/ee12046/public_html/trabalhosSiem/trabalhoPHP-2/templates/common/sobrenos.tpl',
-      1 => 1485466032,
+      1 => 1485736021,
       2 => 'file',
     ),
   ),
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				
 				<div class="coluna" width="50%" style="text-align: center;">
 					<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-files/EduardoGrifo_RafaelQuintão_Site.pptx" download style="text-decoration:none">
+files/Mockup-e-mapa-do-site.zip" download style="text-decoration:none">
 							<img src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 images/assets/ppt2.png" alt="PPT" height="auto" width="70px"></a> <br>
 

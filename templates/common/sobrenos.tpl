@@ -13,7 +13,7 @@
 				<div style="margin-left: 34%">
 				
 				<div class="coluna" width="50%" style="text-align: center;">
-					<a href="{$BASE_URL}files/EduardoGrifo_RafaelQuintão_Site.pptx" download style="text-decoration:none">
+					<a href="{$BASE_URL}files/Mockup-e-mapa-do-site.zip" download style="text-decoration:none">
 							<img src="{$BASE_URL}images/assets/ppt2.png" alt="PPT" height="auto" width="70px"></a> <br>
 
 					Mockup <br>em PowerPoint <br>

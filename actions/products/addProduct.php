@@ -64,7 +64,7 @@
       $_SESSION['error_messages'][] = 'Duplicate product';
       $_SESSION['field_errors']['name'] = 'Product name already exists';
     }
-    else $_SESSION['field_errors']['addProdErr'] = 'Error creating product';
+    else $_SESSION['field_errors']['addProdErr'] = 'Erro ao adicionar produto';
 
     $_SESSION['form_values'] = $_POST;
     header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -73,6 +73,6 @@
 
   include ($BASE_DIR . 'actions/products/product_list_creator.php');
 
-  $_SESSION['success_messages']['addProd'] = 'Product added successfully';  
+  $_SESSION['success_messages']['addProd'] = 'Produto adicionado com sucesso';  
   header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>
